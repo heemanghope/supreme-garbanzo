@@ -10,7 +10,7 @@ public class Sample03 {
 		 */
 		
 	     System.out.println("이 다음 문자에 개행을 \n합니다.");
-	     System.out.print("이 다음 문자에 캐리지 리턴을\r합니다.");     //이클립스에서 추가 설정 변경을 해야확인 가능
+	     System.out.print("이 다음 문자에 캐리지 리턴을\r 합니다.");     //이클립스에서 추가 설정 변경을 해야확인 가능
 	     System.out.println("이 다음 문자에 탭 공백을\t합니다.");
 	     System.out.println("이 다음 문자에 작은 따옴표를\'\' 작성합니다.");
 	     System.out.println("이 다음 문자에 큰 따옴표를 \"\" 작성합니다.");

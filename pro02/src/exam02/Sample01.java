@@ -5,12 +5,12 @@ public class Sample01 {
 	public static void main(String[] args) {
 		System.out.print("안녕하세요");
 		System.out.print("반갑습니다");
-		System.out.print("제이름은 입니다.");	
+		System.out.print("제이름은 홍길동 입니다.");	
 		
 		
 		System.out.println("안녕하세요");
 		System.out.println("반갑습니다");
-		System.out.println("제이름은 입니다.");	
+		System.out.println("제이름은 홍길동 입니다.");	
 		
 		// 출력 형식을 지정하는 메서드
 		int i1= 30;
