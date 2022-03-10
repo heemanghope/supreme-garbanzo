@@ -42,16 +42,19 @@ public class Sample06 {
 	    
 	    switch(h /12) {
 	    case 0 :
-	    	if(h==0) {
-	    		h =12; 
-	    	}
+	    	h =h ==0 ? 12 : h;
 	    	break;
+	    	//if(h==0) {
+	    	//	h =12; 
+	    //	}
+	    	//break;
 	    case 1 :
 	    	
 	    		  ampm="오후";
-	    		  if(h!=12) {
-	    		  h-=12;
-	    				  }
+	    		 // if(h!=12) {
+	    		 // h-=12;
+	    		//		  }
+	    h=h!=12?h-12 :h;
 	    }
 	    
 	    
