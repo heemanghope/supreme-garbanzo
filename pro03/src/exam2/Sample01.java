@@ -70,6 +70,10 @@ public class Sample01 {
 				i++;
 				
 			}
-	}
+			System.out.println("----------");
+			
+		}
+		
 	}
 }
+
