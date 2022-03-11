@@ -72,8 +72,23 @@ public class Sample01 {
 			}
 			System.out.println("----------");
 			
+			
+			
+			
+			//전부 생략
+			i = 0;
+			for(;;) {
+				System.out.println(i + " 번째 반복!!");
+				if(i >= 4) {
+					break;
+				}
+				i++;
+			
+			
 		}
 		
 	}
+	}
 }
+
 
