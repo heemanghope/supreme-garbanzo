@@ -49,7 +49,7 @@ public class Sample06 {
 			if((com == 1 && user == 2 || com ==2 && user == 3 || com == 3 && user == 1)) {
 				win++;
 				System.out.println("이겼습니다!");
-			}else if((com ==1 && user == 1 || com ==2 && user ==2 || com ==3 || user ==3)) {
+			}else if((com ==1 && user == 1 || com ==2 && user ==2 || com ==3 && user ==3)) {
 				draw++;
 				System.out.println("비겼습니다.");
 			}else if((com==1 && user == 3 || com ==2 && user == 1 || com ==3 && user ==2)) {
