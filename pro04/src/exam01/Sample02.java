@@ -75,7 +75,7 @@ public class Sample02 {
     for (int i =0; i<5; i++) {
 	    System.out.print(arr4[i] + "\t");
              }
-System.out.print("\n");
+             System.out.print("\n");
 
             }
                  }
