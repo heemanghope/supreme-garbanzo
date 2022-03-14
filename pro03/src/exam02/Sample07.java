@@ -1,4 +1,4 @@
-package exam2;
+package exam02;
 
 public class Sample07 {
 
@@ -48,6 +48,8 @@ public class Sample07 {
 			 
 		 }
 		 
-		 
+		 //<필드 생성자>
+		//------객체 생성할 때 처음 값 지정하는 거라고 생각하기
+		// \t 역슬래시 tab 쓰면 공백이 생긴다 !
 	}
 }
