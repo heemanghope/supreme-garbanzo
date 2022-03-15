@@ -37,7 +37,9 @@ public class Sample11 {
 			int num;
 			String other ="";
 			if(sc.hasNextInt()) {  //정수
-                 num =sc.nextInt(); sc.nextLine();
+                 num =sc.nextInt(); sc.nextLine(); //버퍼의 남아있는 데이터를 클리어시켜준다. 버퍼//개행 
+                 //클리어 플러쉬 ->> 스캐너로,, 개행을 날려버리기위해서 (2)번 ! 겹쳐져있으면 넥스트 라인을 쓴다.
+                 
 			}else {
 				other = sc.nextLine();
 				if(other.equals("exit")) {
