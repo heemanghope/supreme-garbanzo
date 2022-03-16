@@ -36,6 +36,7 @@ public class Sample13 {
 	       char c = (char)(random.nextInt(end- start +1) + start);
 		    System.out.println(c);
 	   }
+	   System.out.println("--------------");
 	   
 	   // 12자의  시리얼 넘버를 생성하시오. (시리얼 넘버는 'A' ~ 'Z' 사이의 문자로만 이루어져 있는 것으로 한다.
 	   String serial = "";
@@ -45,7 +46,7 @@ public class Sample13 {
 	   
 	   for(int i=0;  i <12; i++) {
 	       char c = (char)(random.nextInt(end- start +1) + start);
-	       serial +=c;
+	       serial +=c;            // 90-65=25+1 =총 26개
 	       
 		    System.out.println(c);
 }

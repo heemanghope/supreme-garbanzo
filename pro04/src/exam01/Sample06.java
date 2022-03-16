@@ -6,7 +6,7 @@ public class Sample06 {
 
 	public static void main(String[] args) {
 		/*
-		 * 배열의 깊은 복사 -> 반복문을 사용하여 값을 하나씩 배열에 저장 //참조값이 아니라 
+		 * 배열의 깊은 복사 -> 반복문을 사용하여 값을 하나씩 배열에 저장 
 		 */
 		int[] arr1 =new int [] {1, 2, 3, 4,5};
 		int[] arr2 = new int [arr1.length];

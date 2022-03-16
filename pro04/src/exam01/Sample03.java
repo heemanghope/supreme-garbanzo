@@ -16,13 +16,17 @@ public class Sample03 {
 		}
              System.out.print("\n");
              
-             String[] arr3= new String[3];
+       // 문자열 배열 생성, 초기화 하지 않음
+        String[] arr3= new String[3];
                
-             for(int i =0; i<3; i++) {
-            	 System.out.print(arr3[i] + "\t");
-            	 //System.out.println(arr3[i].length(); //문자열 배열의 값을 초기화 하지 않으면 문자열 관련 메서드를 사용할 때 에러 발생
+        for(int i =0; i<3; i++) {
+            System.out.print(arr3[i] + "\t");
+            	 
+            	 
+          	 //문자열 배열의 값을 초기화 하지 않으면 문자열 관련 메서드를 사용할 때 에러 발생
+          	 System.out.println(arr3[i].length());
              }
-             System.out.print("\n");
+          System.out.print("\n");
              
              
              //정수 배열 생성, 초기화 하지 않음

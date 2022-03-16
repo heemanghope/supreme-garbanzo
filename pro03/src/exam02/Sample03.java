@@ -7,7 +7,7 @@ public class Sample03 {
 		for(int i=99; i>0; i--) {
 			System.out.println(i);
 		}
-	 for(char c= 'A'; c<='z'; c++) {
+	 for(char c= 'A'; c<='Z'; c++) {
 		 System.out.printf("%c <-> %d\n",c,(int)c);
 	 }
 	 

@@ -18,12 +18,12 @@ public class Sample04 {
 		
 		
 		/*
-		 *  배열 복사 -> 얕은 복사 //참조값만 복사해서 사용한다.
+		 *  배열 복사 -> 얕은 복사 //참조값만 복사해서 사용한다.  //서로 같은 공간의 값을 바꾸기
 		 */
 
 		
 		 int[] arr1 = new int[] {1,2,3,4,5};
-		 int[] arr2 = arr1;
+		 int[] arr2 = arr1;//arr1의 값을 arr2로 참조값을 만드는 것
 		 
 		 for (int i =0; i<5; i++) {
 			 System.out.printf("arr1[%d] -> %d, arr2[%d] - > %d\n", i,arr1[i],i,arr2[i]);
@@ -48,7 +48,7 @@ public class Sample04 {
 		 for(int i=0; i <5; i++) {
 			 arr4[i] =arr3[i];
 			 
-			
+			        // arr3번 arr4번 값이 같지 않음(깊은 복사) -서로 다른 공간의 값을 바꾼다.
 		 }
 		 
 		 for (int i =0; i<5; i++) {
@@ -65,3 +65,9 @@ public class Sample04 {
 	}
  
 }
+
+//공간 -> n1 네모안에 값
+//공간 -> arr1 (안에 참조값) 만들어줌-> 네모 안에 1,2,3,4(공간) -new int 5//메모리 어딘가에 있는 공간을 만듦.
+//int[] arr1;
+//참조값이 같은 것이다.
+//배열에 저장되어있는 값 자체를 복사한다.-> 깊은 복사

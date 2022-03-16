@@ -37,7 +37,8 @@ public class Sample06 {
 		 * 
 		 */
 		
-        int cnt=0; //flag
+        int cnt=0; //flag 
+        
         System.out.print("정수값 입력: ");
         num =sc.nextInt();
         
@@ -54,7 +55,8 @@ public class Sample06 {
         
         
         
-        
+        //깃발의 뜻처럼 상태를 기록하고 처리 흐름을 제어하기 위한 변수.
+        //처리 흐름을 제어할 때 사용해 제어 플래그(control flag)//참과 거짓을 나타내는 boolean 타입의 변수에 토글기능에 사용하기도함.
 }
 	
 	

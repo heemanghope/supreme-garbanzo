@@ -10,8 +10,9 @@ public class Sample09 {
 		 *  문자열 변수명.charAt(위치값)
 		 *  
 		 */
-		String s= "Hello Java Programming";
-		char c =s.charAt(5);
+		String s= "Hello Java Programming";// 0 1 2 3 4 5 6  7 8 9 10 11 12 13 14 15 16
+		                                    //H e l l o   J  a v a     P  r  o  g r  a
+		char c =s.charAt(7);
 		System.out.println(c);
 		
 		

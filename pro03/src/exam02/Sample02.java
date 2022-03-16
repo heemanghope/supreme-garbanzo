@@ -18,7 +18,8 @@ public class Sample02 {
 
 	
 			System.out.println("----------");
-			for(int i=2;  i<100; i+=2 ) {
+			for(int i=2;  i<100; i+=2 ) { //초기식 2로 시작해서 100전까지
+				//2씩 증가합니다.
 				System.out.println(i);
 			}
 	}

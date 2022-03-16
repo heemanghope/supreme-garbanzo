@@ -16,7 +16,7 @@ public class Sample14 {
 		Random random = new Random();
 		
 	    String serial = "";
-	    char start = 'A'; char end = 'z';
+	    char start = 'A'; char end = 'Z';
 	    
 	    int count = 0;
 	    
@@ -30,7 +30,7 @@ public class Sample14 {
 		        serial +=c;                         // 90-65 +1 =26 +65=91
 		        if(i % 4 == 3 && i!=11) {
 		        	// 4개씩 하고 3으로 작대기 들어가기(?) maybe,,
-		        	// 마지막 i 값에는 - 들어가면 안된다.
+		        	// 마지막 i 값에는 - 들어가면 안된다.(=i! =11)
 		        	serial += "-";
 		        }
 		}

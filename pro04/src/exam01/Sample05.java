@@ -34,10 +34,10 @@ public class Sample05 {
 	//}
 	
 	char[] crypto =new char[origin.length];
-	for(int i=0; i<origin.length; i++) {  // 문자열의 길이는 [sInput.length()];<=소괄호사용,메서드
-		                                      // 배열 길이/크기를 구하는<= 소괄호 사용x,속성 
+	for(int i=0; i<origin.length; i++) {       // 문자열의 길이는 [sInput.length()];<=()소괄호사용, 메서드!!
+		                                      // 배열 길이/크기를 구하는<= 소괄호 사용x, 속성!! 
 		if(origin[i] + 3 >'z') {
-		   crypto[i] =(char)(origin[i] +3 -26);
+		   crypto[i] =(char)(origin[i] +3 -26);  //3을 넘으면 26원래 알파벳으로 돌아가게 한다.
 		} else {
 			crypto[i] =(char) (origin[i] +3);
 			

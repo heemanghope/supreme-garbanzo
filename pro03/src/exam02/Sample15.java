@@ -2,6 +2,7 @@ package exam02;
 
 import java.util.Scanner;
 import java.util.Random;
+
 public class Sample15 {
 
 	public static void main (String [] args) {
