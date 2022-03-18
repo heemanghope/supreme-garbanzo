@@ -42,7 +42,7 @@ public class Sample01 {
 			   
 		   }
 		   for(int i =0; i <arr3.length; i++) {
-			   for(int j=0; j <arr3[i].length; j++) {
+			   for(int j=0; j <arr3[i].length; j++) { //2차 배열에서 숫자로 입력 금지. arr3[i] length로 쓸것!
 				   System.out.print(arr3[i][j] + "\t");
 				   
 			   }

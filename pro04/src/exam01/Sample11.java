@@ -35,9 +35,9 @@ public class Sample11 {
 			System.out.printf("%d 번째 정수값 입력 : ", i + 1);
 			
 			int num;
-			String other ="";
+			String other =""; // 그외에는 string에 저장하라
 			if(sc.hasNextInt()) {  //정수
-                 num =sc.nextInt(); sc.nextLine(); //버퍼의 남아있는 데이터를 클리어시켜준다. 버퍼//개행 
+                 num =sc.nextInt(); sc.nextLine(); //버퍼의 남아있는 데이터를 클리어시켜준다. 버퍼//개행이 남아있다. nextInt에.. 
                  //클리어 플러쉬 ->> 스캐너로,, 개행을 날려버리기위해서 (2)번 ! 겹쳐져있으면 넥스트 라인을 쓴다.
                  
 			}else {

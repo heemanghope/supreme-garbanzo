@@ -16,7 +16,7 @@ public class Sample02 {
 			for(int j =0; j< arr1[i].length; j++) {
 				arr1[i][j]=num++;
 				
-			    }
+			    }//초기화
 			
         }
 		
@@ -24,7 +24,7 @@ public class Sample02 {
 				for(int j =0; j< arr1[i].length; j++) {
 			    System.out.print(arr1[i][j]+"\t");
 				
-				}
+				}//출력구문따로
 				
 				
 				System.out.print("\n");
@@ -36,7 +36,7 @@ public class Sample02 {
 	        System.out.println("------------");
 	        
 		/*
-		 * 1~46 사이의 임의의 정수를 5x6 배열에 순차적으로 저장하고 표 형식으로 출력하시오.
+		 * 1~49 사이의 임의의 정수를 5x6 배열에 순차적으로 저장하고 표 형식으로 출력하시오.
 		 * 
 		 */
 	
