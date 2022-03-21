@@ -141,7 +141,7 @@ public class Sample01 {
 		}
 		*/
 		
-		// 세번째 방법
+		// 세번째 방법                                                배열의 크기를 모르기때문에.....동적배열 사용하기
 		int[] arr4 = new int[0];
 		int[] arr5 = new int[0];
 		
@@ -150,14 +150,15 @@ public class Sample01 {
 			
 			if(arr1[i] % 2 == 0) {
 				temp = new int[arr4.length + 1];
-				System.arraycopy(arr4, 0, temp, 0, arr4.length);
-				arr4 = temp;
+				System.arraycopy(arr4, 0, temp, 0, arr4.length); //깊은 복사//늘어난 배열에 추가시키기..
+				arr4 = temp;//얕은 복사
 				
+				           //늘어난위치,짝수//idx1
 				arr4[arr4.length - 1] = arr1[i];
 			} else {
 				temp = new int[arr5.length + 1];
 				System.arraycopy(arr5, 0, temp, 0, arr5.length);
-				arr5 = temp;
+				arr5 = temp;//늘어난위치,       홀수
 				
 				arr5[arr5.length - 1] = arr1[i];
 			}
@@ -201,9 +202,9 @@ public class Sample01 {
 		int[] arr6 = new int[0];
 		int[] arr7 = new int[1];
 		
-		for(int i = 0; i < arr4.length - 1; i++) {
-			if(arr4[i] != -1) {
-				for(int j = i + 1; j < arr4.length; j++) {
+		for(int i = 0; i < arr4.length - 1; i++) {//i에서 5번 끝까지 비교해야하는것이 없다. 그러므로 -1까지
+			if(arr4[i] != -1) { //arr4 -1이 아닐때에만 아래 for문을 반복해라
+				for(int j = i + 1; j < arr4.length; j++) { //i가 0번일떄 j는 1을 넣는다.그러므로 +1
 					if(arr4[i] == arr4[j]) {
 						arr4[j] = -1;
 					}
@@ -223,15 +224,15 @@ public class Sample01 {
 		
 		arr7[0] = arr5[0];
 		for(int i = 1; i < arr5.length; i++) {
-			boolean dup = false;
-			for(int j = 0; j < arr7.length; j++) {
-				if(arr7[j] == arr5[i]) {
-					dup = true;
+			boolean dup = false; //중복을 알수있는 flag를 만들어놓음 //FLASE면 중복이 없는것
+			for(int j = 0; j < arr7.length; j++) {           //중복이 있는 지 없는 지 중복검사하는 것이다
+				if(arr7[j] == arr5[i]) {//==  같은 지 보기!
+					dup = true; // 중복나왔다고 생각하고 BREAK를 시켜주기
 					break;
 				}
 			}
-			if(!dup) {
-				arr7 = Arrays.copyOf(arr7, arr7.length + 1);
+			if(!dup) {//중복이 안되어있어면
+				arr7 = Arrays.copyOf(arr7, arr7.length + 1); //기존 Arr7에 하나더 늘려서 저장한다.
 				arr7[arr7.length - 1] = arr5[i];
 			}
 		}
@@ -246,10 +247,10 @@ public class Sample01 {
 		int[] arr8 = arr6.clone();
 		int[] arr9 = arr7.clone();
 		
-		for(int i = 0; i < arr8.length - 1; i++) {
+		for(int i = 0; i < arr8.length - 1; i++) {            //중첩반복 나머지 마이너스 일을 꼭해주기..
 			for(int j = i + 1; j < arr8.length; j++) {
 				if(arr8[i] > arr8[j]) {
-					int temp = arr8[j];
+					int temp = arr8[j];//변수하나만들어서 임시로 만들어줌. temp에 저장된 값을 j에 저장해줌
 					arr8[j] = arr8[i];
 					arr8[i] = temp;
 				}

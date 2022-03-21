@@ -73,8 +73,8 @@ public class Sample02 {
 	      int[][] arr3 =new int[5] [];
 	      
 	      for(int i =0; i <arr3.length; i++) {
-	          int size = rand.nextInt(4) +3;
-               arr3[i] =new int[size];
+	          int size = rand.nextInt(4) +3;// (3,4,5,6) +3부터 내가 원하는 랜덤의 수를 넣는다.
+               arr3[i] =new int[size];// 빈공간에 하는 것.
                
                for(int j =0; j<arr3[i].length;j++) {
             	   num =rand.nextInt(49) +1;

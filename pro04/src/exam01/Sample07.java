@@ -21,21 +21,22 @@ public class Sample07 {
 		 * 		평 균 : 14.3
 		 */
 		Scanner sc = new Scanner(System.in);
+		int tot =0;
 		double avg;
 		
 		System.out.print("총 입력 횟수 : ");
 		int count = sc.nextInt();
 		
-		int[] arr1 = new int[count + 1];
+		int[] arr1 = new int[count];
 		
-		for(int i = 0; i < arr1.length - 1; i++) {
+		for(int i = 0; i < arr1.length; i++) {
 			System.out.printf("%d 번째 정수값 입력 : ", i + 1);
 			arr1[i] = sc.nextInt();
-			arr1[arr1.length - 1] += arr1[i];
+			tot += arr1[i];
 		}
 		
-		avg = (double)arr1[arr1.length - 1] / arr1.length;
-		System.out.printf("총 합 : %d\n", arr1[arr1.length - 1]);
+		avg = (double)tot / arr1.length;
+		System.out.printf("총 합 : %d\n", tot);
 		System.out.printf("평 균 : %.1f", avg);
 	}
 

@@ -12,7 +12,7 @@ public class Sample09 {
 		 */
 		Random rand = new Random();            
 	    int[] arr1 =new int[5];
-	    boolean duplicate =false;
+	    boolean duplicate =false;//flag를 이용한다.
 	    
 	    for (int i=0;i <arr1.length;)  {
 	    	int num = rand.nextInt(19) + 1;     
@@ -22,13 +22,13 @@ public class Sample09 {
 	    		if(arr1[j] == num) {
 	    			duplicate =true;
 	    			
-	    			break;
+	    			break;//인접한 for문 중단시키기
 	    		}
 	    	
-	    	  if(! duplicate) {
+	    	  if(! duplicate) {//중복이 안되엇을때만 추가해라
 	             arr1[i] =num;//1씩 증가가 아니라 데이터를 추가할때마다
 	                           //중복이 되었다면 유지를 시켜주고 중복이 안되었을때는 다음걸로 증가시키기
-	             System.out.print(arr1[i] + "\t");
+	             System.out.print(arr1[i] + "\t"); 
 	             i++;
 	    	  } 
 	            
