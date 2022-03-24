@@ -9,7 +9,7 @@ public class Constructor {
 	
 	public Constructor() {} //메서드
 	
-	public Constructor(int num1) {
+	public Constructor(int num1) {                    //클래스 안에 매개변수이구나!
 		this.num1 = num1;
 
 	}//객체의 자기 자신이다.라고도 의미한다.  //이미 num1 생성자가 있다. 재사용하고자하는 목적이 있음.

@@ -24,8 +24,8 @@ public class Circle {
 		return radius;
 	}
 	
-	public double getDiamiter() {
-		return radius * 2;
+	public double getDiamiter() {  //diamiter 지름
+		return radius * 2;   //radius 반지름
 	}
 	
 	// getter
@@ -39,10 +39,11 @@ public class Circle {
 	}
 	
 	private void _area() {
-		area = _PI * radius * radius;
+		area = _PI * radius * radius;            //원의 넓이 : (반지름)×(반지름)×(원주율)
 	}
 	
 	private void _round() {
-		round = 2 * _PI * radius;
+		round = 2 * _PI * radius;                      //원의 둘레 : 지름 * 원주율
+		                                                  //원의 둘레 : 반지름 * 2*원주율
 	}
 }

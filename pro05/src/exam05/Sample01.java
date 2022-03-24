@@ -32,7 +32,7 @@ public class Sample01 {
 	     
 	     Random rand =new Random();
 	     
-	     r1.height =rand.nextInt(7) +3;
+	     r1.height =rand.nextInt(7) +3; //3~9사이의 범위 3,4,5,6,7,8,9
 	     r2.height =rand.nextInt(7) +3;
          System.out.println(r1.height + "|"+ r2.height);
          
