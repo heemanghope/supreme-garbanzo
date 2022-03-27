@@ -39,15 +39,15 @@ public class Run {
 		
 		
 		Page page = new Page(55, 100);
-		
+		//현재 페이지번호를 보고 싶다면??
 		for(int i = 0; i < page.getLimitPageNumber(); i++) {
 			page.nextPage();
-			System.out.println(page.getPageNumber() + " 페이지 입니다.");
+			System.out.println(page.getPageNumber() + " 페이지 입니다.");  //일정 횟수만큼 반복하는것
 		}
 		
 		while(page.existsPrevPage()) {
 			page.prevPage();
-			System.out.println(page.getPageNumber() + " 페이지 입니다.");
+			System.out.println(page.getPageNumber() + " 페이지 입니다.");//마지막페이지(100)에서부터 (1)로 
 		}
 	}
 
