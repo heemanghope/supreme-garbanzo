@@ -42,17 +42,17 @@ public class ReportGrade {
 	
 	public void setGrades(String subject, double grade) {
 		int idx = this._findIndex(subject);
-		this.grades[idx] = grade;
-	}
+		this.grades[idx] = grade;//과목배열의 인덱스와 점수배열의 인덱스가 서로 동일한 인덱스 //국어 과목의 인덱스가 
+	}//0번이면 점수 0번  //방금한것과 같이(48줄) 호출만 시키는 걸로 변형.//코드가 확실히 줄어든다.
 	
 	public double getGrade(String subject) {
-		int idx = this._findIndex(subject);
-		return this.grades[idx];
+		int idx = this._findIndex(subject); //97번째줄 findindex에서 동일한 과목명을 찾아 index에 저장
+		return this.grades[idx]; // 호출만 시켜준다
 	}
 	
-	public void add(String subject, double grade) {
-		int len = this.subjects.length;
-		this.subjects = Arrays.copyOf(this.subjects, len + 1);
+	public void add(String subject, double grade) {//정보 추가이므로 return해줄거는 없음
+		int len = this.subjects.length;//동적배열을 활용하는것. 
+		this.subjects = Arrays.copyOf(this.subjects, len + 1); //this.subjects.length+`1을 줄인것임.
 		this.grades = Arrays.copyOf(this.grades, len + 1);
 		
 		this.subjects[len] = subject;
@@ -76,22 +76,22 @@ public class ReportGrade {
 		
 		if(index >= this.subjects.length && index < 0) {
 			System.out.println("인덱스의 범위를 벗어났습니다.");
-			return;	// 메서드 종료
+			return;	// return이 되는 순간 메서드는 종료 !!
 		}
 		
-		String[] temp1 = new String[this.subjects.length - 1];
-		double[] temp2 = new double[this.grades.length - 1];
-		int idx = 0;
+		String[] temp1 = new String[this.subjects.length - 1]; //temp는 (=새로운 공간,임시변수) -1하나삭제된것.subjects=과목
+		double[] temp2 = new double[this.grades.length - 1];//성적정보,grades
+		int idx = 0; //외부의 별도 idx를 만듬
 		
 		for(int i = 0; i < this.subjects.length; i++) {
-			if(i != index) {
+			if(i != index) {//내가 찾고자하는 i와 다를때
 				temp1[idx] = this.subjects[i];
 				temp2[idx] = this.grades[i];
 				idx++;
 			}
 		}
-		this.subjects = temp1;
-		this.grades = temp2;
+		this.subjects = temp1; //기존의 subjects에다가 얕은복사 시켜야함.
+		this.grades = temp2;//기존의 grades에다가 얕은복사 시켜야함.
 	}
 	
 	private int _findIndex(String subject) {

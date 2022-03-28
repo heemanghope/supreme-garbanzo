@@ -3,8 +3,8 @@ package exam03;
 public class Person {
    private String name;
    
-   public Person() {}
-   public Person(String name) {
+   public Person() {}   //기본 생성자를 위한 것
+   public Person(String name) {//매개변수가 있는 것????
 	   this.name =name;
 	   
    }
