@@ -9,7 +9,8 @@ public class Student {
 	private int classRoom;
 	private int classlevel;
 	
-	public Student(String name,int age) {
+	private Student(String name,int age) {//이름, 나이,학년 ,반 생성자가 미리 공개되어있음. StudentList안에!!!
+		  // 그러므로 public 대신에 private을 써준다.
 		this.name =name;
 		this.age =age;
 		

@@ -16,7 +16,7 @@ public class Main {
 		 */
 		
 		//데이터를 배열에 담아서 추가 삭제 수정 조회하는것임.................................
-//	GradeList datas =new GradeList();
+//	GradeList data =new GradeList();
 	//datas.add(new Grade("국어",67.8));
 //	System.out.println("국어 : " +datas.getScore("국어"));
 			
