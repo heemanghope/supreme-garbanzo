@@ -11,8 +11,8 @@ public class Sample02 {
 		}		
 			
 			System.out.println("----------");
-			for(int i =0;  i < 99; i++) {
-				System.out.println(i+1);
+			for(int i =0;  i < 99; i++) { 
+				System.out.println(i + 1);  //98+1 =99까지로 나오게 만들기.
 			}
 		//1 ~99 까지 반복문을 사용하여 반복 출력 하시오.(단, 짝수에 해당하는 값만 출력 하시오.)
 

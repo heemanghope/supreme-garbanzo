@@ -12,14 +12,16 @@ public class Sample01 {
 		 */
 		
 		// Scanner 객체 생성
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in); // new 라는 연산자로 새로운 객체(Scanner)를 생성한다.system.in 사용자 (입력)!
+		//객체타입, 변수명,  새로운객체생성                                         // 반대로 콘솔창에 system.out 을 하면 (출력)
 	
         // 사용자 입력을 받고 재사용을 위해 변수에 저장.
 		System.out.print("이름을 입력하세요. : ");
-	    String sInput = sc.next();
-	    
+	    String sInput = sc.next(); //다음 토큰을 문자열로 return
+	      //2.여기에 저장!              //1.홍길동이라고 입력하면
 	    // 사용자 입력 값을 출력
-	    System.out.println("사용자 입력 값 : " + sInput);
+	    
+	    System.out.println("사용자 입력 값 : " + sInput);//재사용 sInput 시켜서 출력
 	    System.out.printf("사용자 입력 값 : %s\n", sInput);
    }
 }

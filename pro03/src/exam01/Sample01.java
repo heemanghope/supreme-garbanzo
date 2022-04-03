@@ -24,7 +24,7 @@ public class Sample01 {
 		
 		if(num1 > 10) {
 			System.out.println("num1에 저장된 값은 10 보다 큽니다.");
-		}
+		}  // 이 코드가 참일때만 실행이 된다.  10보다 크지않은 9이므로 아예실행이 안됨.
 
 		
 		/*

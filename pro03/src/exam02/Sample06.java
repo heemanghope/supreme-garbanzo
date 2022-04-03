@@ -37,16 +37,16 @@ public class Sample06 {
 		 * 
 		 */
 		
-        int cnt=0; //flag 
+        int cnt=0; //flag   cnt가 애초에 0이다.
         
         System.out.print("정수값 입력: ");
         num =sc.nextInt();
         
         for(int i=0; i < num; i++) {
-            System.out.print(i + 1+ " ");
-            cnt++;
-            if((i+1) %7== 0) {
-            	System.out.println();
+            System.out.print(i + 1+ " ");//        출력하고 
+            cnt++;//                              증가시키기
+            if((i+1) %7== 0) {//7까지 쓴다음에 0으로 다시 돌아가기.
+            	System.out.println(); //개행을시켜줌.ln
             	
             }
 	}
@@ -54,7 +54,7 @@ public class Sample06 {
         
         
         
-        
+        //flag 임시로 저장했다가 나중에 추가 로직이 동작할 수 있게 만드는 것.
         //깃발의 뜻처럼 상태를 기록하고 처리 흐름을 제어하기 위한 변수.
         //처리 흐름을 제어할 때 사용해 제어 플래그(control flag)//참과 거짓을 나타내는 boolean 타입의 변수에 토글기능에 사용하기도함.
 }

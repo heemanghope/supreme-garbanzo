@@ -21,25 +21,25 @@ public class Sample03 {
 	     System.out.print("진행도를 나타내기 위한 프로그래스 바\n");
 	     System.out.print("프로그램 로딩 중- [                -   0%]\r");
 	     Thread.sleep(1000);      //코드의 실행을 일시정지 시킨다. 1000=1초
-	     System.out.print("프로그램 로딩 중- [             ##   -   10%]\r");
+	     System.out.print("프로그램 로딩 중- [                 ##   -   10%]\r"); //디버깅으로 진행상황을 알 수있음.
 	     Thread.sleep(1000);  
-	     System.out.print("프로그램 로딩 중- [           ####   -   20%]\r");
+	     System.out.print("프로그램 로딩 중- [               ####   -   20%]\r");
 	     Thread.sleep(1000);  
-	     System.out.print("프로그램 로딩 중- [         ######   -   30%]\r");
+	     System.out.print("프로그램 로딩 중- [             ######   -   30%]\r");
 	     Thread.sleep(1000);  
-	     System.out.print("프로그램 로딩 중- [       ########   -   40%]\r");
+	     System.out.print("프로그램 로딩 중- [            #######   -   40%]\r");
 	     Thread.sleep(1000);  
-	     System.out.print("프로그램 로딩 중- [     ##########   -   50%]\r");
+	     System.out.print("프로그램 로딩 중- [           ########   -   50%]\r");
 	     Thread.sleep(1000);  
-	     System.out.print("프로그램 로딩 중- [   ############   -   60%]\r");
+	     System.out.print("프로그램 로딩 중- [         ##########   -   60%]\r");
 	     Thread.sleep(1000);  
-	     System.out.print("프로그램 로딩 중- [   ############   -    70%]\r");
+	     System.out.print("프로그램 로딩 중- [       ############   -   70%]\r");
 	     Thread.sleep(1000);  
-	     System.out.print("프로그램 로딩 중- [ ##############   -    80%]\r");
+	     System.out.print("프로그램 로딩 중- [     ##############   -   80%]\r");
 	     Thread.sleep(1000);  
-	     System.out.print("프로그램 로딩 중- [ ###############  -    90%]\r");
+	     System.out.print("프로그램 로딩 중- [   ################  -    90%]\r");
 	     Thread.sleep(1000);  
-	     System.out.print("프로그램 로딩 중- [####################  -  100%]\r");
+	     System.out.print("프로그램 로딩 중- [###################  -   100%]\r");
 	}
 
 }

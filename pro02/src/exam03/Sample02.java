@@ -23,7 +23,7 @@ public class Sample02 {
 		System.out.printf("사용자 입력 값 : %d\n", iInput);
 		
 		System.out.print("실수를 입력하세요. : ");
-		double dInput = sc.nextDouble();
+		double dInput = sc.nextDouble();//문자열을 실수로 만든다.
 		
 		System.out.println("사용자 입력 값 : " + dInput);
 		System.out.printf("사용자 입력 값 : %.2f\n", dInput);

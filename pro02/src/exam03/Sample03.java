@@ -6,7 +6,7 @@ public class Sample03 {
 
 	public static void main(String[] args) {
 		/*
-		 * 사용자가 입력한 한 줄 데ㅣ엍를 처리하기 위한 sc.nextLine()
+		 * 사용자가 입력한 한 줄 데이터를 처리하기 위한 sc.nextLine()
 		 * 
 		 * sc.next() 이 메서드는 공백이 있는 문자열에 입력의 구분자로 공백을 취급을 하여 일부의 문자열만 반영한다. 
 		 */

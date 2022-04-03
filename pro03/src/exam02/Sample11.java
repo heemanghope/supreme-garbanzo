@@ -18,10 +18,10 @@ public class Sample11 {
 		String input = sc.nextLine();
 		
 		
-		int cnt =0;
+		int cnt =0; //수만 세겠다.
 		for(int i =0; i <input.length(); i++) {
 			if(input.charAt(i)== 'a') {
-				cnt++;
+				cnt++; //증가하는 의미
 			} else if(input.charAt(i) == 'e') {
 				cnt++;
 				

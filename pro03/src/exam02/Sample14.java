@@ -15,7 +15,7 @@ public class Sample14 {
 		Scanner sc = new Scanner(System.in);
 		Random random = new Random();
 		
-	    String serial = "";
+	    String serial = "";//문자열 초기화를 했음.
 	    char start = 'A'; char end = 'Z';
 	    
 	    int count = 0;
@@ -27,16 +27,19 @@ public class Sample14 {
 		for(int j= 1; j<= count; j++) {
 		    for(int i=0;  i <12; i++) {
 		        char c = (char)(random.nextInt(end- start +1) + start);
-		        serial +=c;                         // 90-65 +1 =26 +65=91
+		        //                                                      90-65 +1 =26 +65=91
+		        
+		        serial +=c;                       
 		        if(i % 4 == 3 && i!=11) {
-		        	// 4개씩 하고 3으로 작대기 들어가기(?) maybe,,
-		        	// 마지막 i 값에는 - 들어가면 안된다.(=i! =11)
+		        	// 4나누고 3개의 하이픈을 넣는다.
+		        	//i는 11이아니면 -넣지않는다. 마지막 i값을 적음 ,마지막 - 지우기
 		        	serial += "-";
 		        }
 		}
 		
 			    System.out.println(serial);
 			    serial = "";
+			    //문자열을 초기화시키지 않으면 계속해서 문자열이 반복해서 쌓이기때문에 초기화는 필수다!
 	}
 }
 }

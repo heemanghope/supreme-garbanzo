@@ -21,7 +21,7 @@ public class Sample03 {
 		 *    
 		 *
 		 */
-		double rate, sMoney, dMoney;
+		double rate, sMoney, dMoney;//sourcemoney, dollarmoney
 		int menu;
 		String mStr; String result="";
 		Scanner sc = new Scanner(System.in);
