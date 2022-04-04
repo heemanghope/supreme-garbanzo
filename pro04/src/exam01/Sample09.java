@@ -12,13 +12,15 @@ public class Sample09 {
 		 */
 		Random rand = new Random();            
 	    int[] arr1 =new int[5];
-	    boolean duplicate =false;//flag를 이용한다.
+	    boolean duplicate =false;//flag를 이용한다.                     
 	    
 	    for (int i=0;i <arr1.length;)  {
 	    	int num = rand.nextInt(19) + 1;     
 	    	duplicate =false;       //중복이 있으면 안된다.
 	    	
-	    	for(int j =0; j <i; j++)//중복 검사 수행하기.0과1까지만 .2일떄 j
+	    	
+	    	
+	    	for(int j =0; j <i; j++)//중복 검사 수행하기.
 	    		if(arr1[j] == num) {
 	    			duplicate =true;
 	    			
@@ -26,7 +28,7 @@ public class Sample09 {
 	    		}
 	    	
 	    	  if(! duplicate) {//중복이 안되엇을때만 추가해라
-	             arr1[i] =num;//1씩 증가가 아니라 데이터를 추가할때마다
+	             arr1[i] =num;//무조건 1씩 증가가 아니라 데이터를 추가할때마다 !!!
 	                           //중복이 되었다면 유지를 시켜주고 중복이 안되었을때는 다음걸로 증가시키기
 	             System.out.print(arr1[i] + "\t"); 
 	             i++;

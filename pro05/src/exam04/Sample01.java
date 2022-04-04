@@ -35,3 +35,6 @@ public class Sample01 {
            }
 
 }
+
+//객체를 여러개 만들어도 공유하고 싶은것이있다.- static을 붙여줌/ 상수-바꾸지않을것이다 - final붙이기
+// 공유+ 상수 =  final static

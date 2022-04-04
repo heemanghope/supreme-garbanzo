@@ -30,12 +30,12 @@ public class Sample05 {
 	char[] origin =sInput.toCharArray();
 	//char[] origin =new char[sInput.length()];
 	//for (int i=0; i <sInput.length(); i++) {
-		// origin[i] =sInput.charAt(i);
+		
 	//}
 	
 	char[] crypto =new char[origin.length];
 	for(int i=0; i<origin.length; i++) {       // 문자열의 길이는 [sInput.length()];<=()소괄호사용, 메서드!!
-		                                      // 배열 길이/크기를 구하는<= 소괄호 사용x, 속성!! 
+		                                      //문자 배열 길이=(크기)를 구하는<=[origin.length]; 소괄호 사용x, 속성!! 
 		if(origin[i] + 3 >'z') {
 		   crypto[i] =(char)(origin[i] +3 -26);  //3을 넘으면 26원래 알파벳으로 돌아가게 한다.
 		} else {
@@ -45,19 +45,24 @@ public class Sample05 {
 		
 	}
 	
-	String res1= new String(origin);
+	String res1= new String(origin);// 문자열로 만들어 주는 과정!! 
 	
 	String res2= new String(crypto);
 		
     //for(int i =0; i< sInput.length(); i++) {
     	//res1 += origin[i];
-    	//res2 += crypto[i];
+    	//res2 += crypto[i]; 문자열로 출력하기.
 	
         //}
     
     System.out.println("암호화 전: "  + res1);
     System.out.println("암호화 후 : " + res2);
-    
+    // 결과가 배열 객체라고 나옴.
+    // 
 	}
 
 }
+
+
+
+//중괄호 잘 확인하기.

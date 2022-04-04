@@ -4,7 +4,7 @@ public class Sample02 {
 	
 	public static void main(String[] args) {
 		
-	
+	//Constructor c1 =new Constructor(); 가능
     Constructor c1 =new Constructor(10);
     System.out.println(c1.num1);
     

@@ -16,7 +16,7 @@ public class Circle {
 	// setter
 	public void setRadius(double radius) {
 		this.radius = radius;
-		_area();	_round();
+		_area();	_round();//기본값을 설정하기 위해서 area round 를 넣는다.이것을 없애면 둘레와 넓이의 값이 0.0으로 나옴.
 	}
 	                                         //캡슐화라는 작업을 할때에는 항상 setter 와 getter가 필요하다.
 	// getter

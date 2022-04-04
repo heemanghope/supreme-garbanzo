@@ -23,6 +23,8 @@ public class Sample02 {
 	    
 	    System.out.println(str1);
 	    System.out.println(str2);
+	    System.out.println(str3);
+	    
 	}
 
 }

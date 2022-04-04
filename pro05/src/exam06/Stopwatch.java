@@ -14,16 +14,16 @@ public class Stopwatch {
 	
 	
 	
-    private int hour;
+    private int hour;         //멤버변수
     private int minute;
     private int second;
 
-    
+    //                            접근
     public void setHour(int h) {  //setter
     	hour =h;
-    	
+    	//간접적으로 public 으로 접근하게 만들때 setter ,getter, 
     }
-    public int getHour() { //변수의 값을 추출 get//getter
+    public int getHour() { //변수의 값을 추출//getter
     	 return hour;
     	 
     }
@@ -39,5 +39,5 @@ public class Stopwatch {
     public void reset() {}
     
      
-	     
+	     //제목: 추상화하여 클래스 만들어보기
 }

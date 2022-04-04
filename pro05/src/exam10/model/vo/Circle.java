@@ -4,9 +4,9 @@ public class Circle {
 
 	private final double PI = 3.14;  //PI 대문자 =상수다 -final 붙여주기
 	private int radius = 1;
-	
-	public void incrementRadius() {
-		//반지름의 크기를 1 증가시키는 메서드
+                                                             
+	public void incrementRadius() {                           
+		//반지름의 크기를 1 증가시키는 메서드                         
 		radius++;
 		
 	}

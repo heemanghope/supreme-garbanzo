@@ -32,11 +32,11 @@ public class Sample08 {
    
  //알파벳 사용 횟수를 저장하기 위한 배열
    //0:a ,1:b,2:c... 25:z
-   int[] cArr =new int[26]; // 0 1 2 3 4...  
+   int[] cArr =new int[26]; // 0 1 2 3 4...  //알파벳 26자 안에서 카운트를 센다.
                             // A B C D E...
    
    for(int i =0; i<data.length(); i++) {//ascii
-	   char c =data.charAt(i);
+	   char c =data.charAt(i);//문자를 추출한다.
 	   
 	    if((c >='A' && c<= 'Z')){
 	    	cArr[c -'A'] +=1; //사용자가 입력한 c에서 A만큼 뺀다. 그위치에 1씩 증가시킨다.

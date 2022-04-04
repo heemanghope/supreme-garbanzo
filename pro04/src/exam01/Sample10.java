@@ -16,14 +16,20 @@ public class Sample10 {
 		int[] arr1 = new int[] {1,2,3};
 	    System.out.println(Arrays.toString(arr1));
 		 //얕은 복사 참조값을 같게한다. arr1에 새로운 배열 참조 i < arr1.length; i++   
+	    
+	    
 	     //동적 배열을 만들기 위해 임시 배열 저장 공간 생성
 		 int[] temp =new int[arr1.length +1];
+		 
 		//arr1 3->4 기존의 가지고 있던 길이가 3에서 4로 늘어난다.//실제로는 늘어난건데 같은 공간을 사용하는것처럼 보임
 		 for(int i =0; i < arr1.length; i++) {
 		      temp[i] =arr1[i];//깊은 복사
 		
 	          }
 	     arr1 =temp;//얕은 복사-참조값을 만들어줌.
+	     
+	     
+	     //****동적배열을 만드는 부분****
 	
 	     System.out.println(Arrays.toString(arr1));
 	         
@@ -47,7 +53,7 @@ public class Sample10 {
 	         System.out.println(Arrays.toString(arr1));
 	         
 	         temp =new int[arr1.length +1];
-	         System.arraycopy(arr1,0, temp,1, arr1.length);
+	         System.arraycopy(arr1,0, temp,1, arr1.length);//temp 빈공간이 앞에생기는 것.
 	         arr1= temp;
 	         
 	         System.out.println(Arrays.toString(arr1)); //tostring 알아서 배열을 계산해줌

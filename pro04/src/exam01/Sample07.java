@@ -27,7 +27,7 @@ public class Sample07 {
 		System.out.print("총 입력 횟수 : ");
 		int count = sc.nextInt();
 		
-		int[] arr1 = new int[count];
+		int[] arr1 = new int[count]; //배열의 크기
 		
 		for(int i = 0; i < arr1.length; i++) {
 			System.out.printf("%d 번째 정수값 입력 : ", i + 1);

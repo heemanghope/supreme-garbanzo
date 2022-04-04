@@ -16,5 +16,5 @@ public class Sample03 {
 		RentBook rb3= new RentBook("도서명","3450203234","2022-03-18");
 		
 	}
-
+//멤버변수 초기화 및 생성자
 }

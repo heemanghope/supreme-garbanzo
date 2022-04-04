@@ -49,7 +49,7 @@ public class Sample01 {
 		/*
 		int[] arr4 = new int[30];
 		int[] arr5 = new int[30];
-		int idx1 = 0, idx2 = 0;
+		int idx1 = 0, idx2 = 0; //flag
 		
 		for(int i = 0; i < arr1.length; i++) {
 			if(arr1[i] % 2 == 0) {
@@ -87,7 +87,7 @@ public class Sample01 {
 		
 		// 두번째 방법
 		/*
-		int[] arr4;
+		int[] arr4;                 //짝수 홀수의 숫자 파악하기.
 		int[] arr5;
 		int cnt1 = 0, cnt2 = 0;
 		for(int i = 0; i < arr1.length; i++) {
@@ -206,7 +206,7 @@ public class Sample01 {
 			if(arr4[i] != -1) { //arr4 -1이 아닐때에만 아래 for문을 반복해라
 				for(int j = i + 1; j < arr4.length; j++) { //i가 0번일떄 j는 1을 넣는다.그러므로 +1
 					if(arr4[i] == arr4[j]) {
-						arr4[j] = -1;
+						arr4[j] = -1;//같은 것을 표시하는것.
 					}
 				}
 			}

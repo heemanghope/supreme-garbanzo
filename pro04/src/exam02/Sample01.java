@@ -19,8 +19,8 @@ public class Sample01 {
 		
 		
 		for(int i =0; i <arr1.length; i++) {
-			for(int j =0; j< arr1[i].length; j++) {
-				System.out.print(arr1[i][j]+ "\t"); //중첩 반복문까지 써야한다.
+			for(int j =0; j< arr1[i].length; j++) {//중첩 반복문까지 써야한다.
+				System.out.print(arr1[i][j]+ "\t"); 
 				
 			    }
 			    System.out.print("\n");
@@ -45,7 +45,7 @@ public class Sample01 {
 			   System.out.println(Arrays.toString(arr3[i]));
 			   
 		   }
-		   for(int i =0; i <arr3.length; i++) {
+		   for(int i =0; i <arr3.length; i++) {          //가변길이를쓸떄 주의할점.
 			   for(int j=0; j <arr3[i].length; j++) { //2차 배열에서 숫자로 입력 금지. -배열의크기=arr3[i] length로 쓸것!
 				                                                               //arr3의 i번쨰 크기로 지정해야한다
 				   System.out.print(arr3[i][j] + "\t");

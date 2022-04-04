@@ -21,13 +21,13 @@ public class Sample03 {
 		
 		
 		
-	sb.append("문자열");
+	sb.append("문자열");//추가하는 것이다.
 	sb.append("을 뒤에");
 	sb.append("추가하는");
-	sb.append("append 메서드");
+	sb.append("append 메서드");//append는 뒤에만 붙이는 것임.
 	System.out.println(sb);
 	
-	sb.insert(0,"원하는 ");
+	sb.insert(0,"원하는 ");//instert 앞에 
 	sb.insert(4,"위치에 ");
 	sb.insert(8,"문자열을 ");
 	sb.insert(13,"삽입하는 ");

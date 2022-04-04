@@ -55,9 +55,9 @@ public class Sample01 {
 		 *      
 		 */
 	 boolean b1 =true;
-	 boolean b2 =false; 
-     char c1 = 'a';
-     String s1 ="a";
+	 boolean b2 =false;               //primitive - boolean,char,byte,short,int,long 기본자료형이라고한다.
+     char c1 = 'a';             
+     String s1 ="a";                    //참조자료형 -객체/클래스 String ,기본자료형이 아님.공간에 참조값 -- 또다른 공간 --값
 	
      byte b3 = 1;
      short s2 = 2;

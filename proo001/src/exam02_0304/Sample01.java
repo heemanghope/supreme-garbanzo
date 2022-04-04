@@ -1,4 +1,4 @@
-package exam02;
+package exam02_0304;
 
 //자바의 기본 기능 외의 추가 기능을 사용하기 위해 작성하는 구문
 import java.util.*;
