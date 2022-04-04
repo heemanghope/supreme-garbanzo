@@ -16,7 +16,7 @@ public class ReportGrade {
 		this.subjects = subjects;
 	}
 
-	public String getName() {
+	public String getName() {//멤버변수의 이름이 접미사로 붙는다.
 		return name;
 	}
 

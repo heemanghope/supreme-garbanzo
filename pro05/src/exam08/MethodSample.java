@@ -19,17 +19,18 @@ public class MethodSample {
 	
 	public int[] method04() {
 		int[] result = new int[3];
-		return result;//return 결과값을 반환한다.
-	}
-	
-	public String method05() {
-		String result = new String(); //String 과 같은 객체 타입은 Null로 return시킬 수 있음.
 		return result;
 	}
 	
-	public void method06(int []arr) {
+	public String method05() {
+		String result = new String();
+		return result;
+	}
+	
+	public int[] method06(int[] arr) {
 		System.out.println(arr);
-		arr[0] =10;//얕은복사 활용하기
+		arr[0] = 10;
+		return arr;
 	}
 	
 	public void method07(int ... nums) {
@@ -39,3 +40,4 @@ public class MethodSample {
 	}
 	
 }
+

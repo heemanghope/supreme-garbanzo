@@ -17,13 +17,15 @@ public class Sample01 {
 		String var3 = m1.method05();
 		
 		int[] var4 = new int[] {1, 2, 3};
-		System.out.println(var4);//참조값만 전달한다. 얕은복사
+		System.out.println(var4);
+		
+		//m1.method06(var4);//참조값만 전달한다. 얕은복사 //return하지않아도 얕은복사하면 가능 (값나오기)
+		
+		
+		//깊은 복사활용하면 값이 달라진다.(새로운경우)
 		m1.method06(var4.clone());
-		System.out.println(var4[0]);//10의 값을 가져온다.
-		
-		
-		
-		//m1.method07(1, 2, 3, 4);
+		System.out.println(var4[0]);
+		m1.method07(1, 2, 3, 4);
 	}
 
 }
