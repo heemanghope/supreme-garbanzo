@@ -18,7 +18,7 @@ public class Main {
 		p3.setName("김주언");
 		System.out.println(p3.getName());
 		
-		pArr[0] = p1;	// 얕은 복사
+		pArr[0] = p1;	// 얕은 복사-참조값을 이용한!
 		pArr[1] = p2;
 		pArr[2] = p3;
 		pArr[3] = new Person();
@@ -28,10 +28,11 @@ public class Main {
 			System.out.println(pArr[i].getName());
 		}
 		
-		PersonList pList = new PersonList(pArr);
+		PersonList pList = new PersonList(pArr); //Personlist의 배열//객체배열
+		
 		
 		for(int i = 0; i < pList.length(); i++) {
-			Person p = pList.get(i);
+			Person p = pList.get(i); //pList.get(0)); --내가 만든객체 PERSON 이 결과로 나옴
 			System.out.println(p.getName());			
 		}
 		
@@ -44,20 +45,20 @@ public class Main {
 		// 새로운 Person 객체를 PersonList에 추가하기
 		pList.add(new Person(""));	// 마지막 인덱스에 추가.
 		pList.add(new Person("곽도운"));
-		pList.addFirst(new Person("강지원"));	// 0번 인덱스에 추가 될 수 있게 한다.
+		pList.addFirst(new Person("강지원"));	// first는 0번 인덱스에 추가 될 수 있게 한다.
 		
 		System.out.println(pList.length());             //7
-		System.out.println(pList.findIndex("곽도운"));    //6
+		System.out.println(pList.findIndex("곽도운"));    //6 (마지막 index) (length-1은 index의값)
 		System.out.println(pList.findIndex("강지원"));    //0
 		
 		// PersonList에 저장된 Person 객체를 삭제
 		System.out.println(pList.get(1).getName());     //배열 1번 삭제전 홍길동
-		pList.remove(1);	// 1번 인덱스에 있는 객체 삭제
+	    pList.remove(1);	// 1번 인덱스에 있는 객체 삭제
 		System.out.println(pList.get(1).getName());   //홍길동 삭제
 		
-		System.out.println(pList.findIndex("박지수")); //배열 박지수찾기
-		pList.remove("박지수");	// 박지수 이름을 찾아서 삭제
-		System.out.println(pList.findIndex("박지수"));
+		//System.out.println(pList.findIndex("박지수")); //배열 박지수찾기
+		//pList.remove("박지수");	// 박지수 이름을 찾아서 삭제
+		//System.out.println(pList.findIndex("박지수"));
 	}
 
 }

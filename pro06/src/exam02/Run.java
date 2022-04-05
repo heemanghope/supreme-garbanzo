@@ -39,7 +39,7 @@ public class Run {
 		System.out.println(Arrays.toString(report.getSubjects()));
 		
 		
-		Page page = new Page(55, 100);
+		Page page = new Page( 100);
 		//현재 페이지번호를 보고 싶다면??
 		for(int i = 0; i < page.getLimitPageNumber(); i++) {
 			page.nextPage();

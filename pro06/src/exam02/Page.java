@@ -4,7 +4,7 @@ package exam02;
 		private int pageNumber;			// 페이지 번호
 		private int limitPageNumber;	// 최대 페이지 번호
 		
-		public Page(int limitPageNumber) {//페이지번호가 0이어도 생성하고 동작하는데 문제없음
+		public Page(int limitPageNumber) {//페이지번호(this pagenumber)가 0이어도 생성하고 동작하는데 문제없음
 			this.limitPageNumber = limitPageNumber;
 		}
 		

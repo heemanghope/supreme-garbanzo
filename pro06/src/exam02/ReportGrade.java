@@ -100,7 +100,7 @@ public class ReportGrade {
 			String s = this.subjects[i];
 			if(subject.equals(s)) {
 				idx = i;	// 동일한 과목명을 찾아서 인덱스 저장
-				break;
+				break;//멈춤.
 			}
 		}
 		return idx;
