@@ -5,8 +5,8 @@ public class Teacher extends Person {
 	private int classRoom;	// 담당 반
 	private String subject;	// 담당 과목
 	
-	public Teacher(String name) {
-		super(name);
+	public Teacher(String name) {//매개변수가 있는 생성자를 만들어주기.
+		super(name);//생성자는 상속이 안된다.
 	}
 	
 	public int getClassLevel() {
@@ -40,9 +40,10 @@ public class Teacher extends Person {
 
 	@Override
 	public String toString() {
-		return "Teacher [name=" + getName() + ", age=" + getAge() + ", gender=" + getGender()
-				+ ", classLevel=" + classLevel + ", classRoom=" + classRoom + ", subject=" + subject + "]";
+	return "Teacher [name=" + getName() + ", age=" + getAge() + ", gender=" + getGender()
+	+ ", classLevel=" + classLevel + ", classRoom=" + classRoom + "]";
 	}
+
 	
 }
 

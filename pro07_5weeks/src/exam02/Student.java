@@ -5,7 +5,7 @@ public class Student extends Person {
 	private int classRoom;	// 반
 	
 	public Student(String name) {
-		super(name);
+		super(name);//생성자는 상속이 안된다.
 	}
 	
 	public int getClassLevel() {
@@ -36,3 +36,6 @@ public class Student extends Person {
 	}
 	
 }
+
+
+

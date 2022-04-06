@@ -11,6 +11,9 @@ public class Main {
 		 */
            
 		
+		
+		
+		
 		/*
 		 * 업 캐스팅
 		 *  -상위 객체로 변환하는 것
@@ -21,7 +24,7 @@ public class Main {
 		 *  
 		 */
 		Person s1 =new Student("홍길동", 16);
-		Person t1 =new Teacher("김철수", 28);
+		Person t1 =new Teacher("김철수", 28);//업캐스팅 해주기
 		
 		System.out.println(s1.getName() + " | " + s1.getAge());
 		System.out.println(t1.getName() + " | " + t1.getAge());
@@ -36,7 +39,7 @@ public class Main {
 			System.out.println(p1[i].getName() + " | " + p1[i].getAge());
 	        }
 	
-	
+	//부모의 메서드로만 가능- 업캐스팅.
 	
 		
 		
@@ -62,12 +65,12 @@ public class Main {
 	
 	 Person[] p2 =new Person[2];
 	 p2[0] =s3; p2[1]=t3; //학생, 선생님 여러개 객체       //Person으로 객체 s3 .t3.??
-	 
+	 //s3가 t3가 Person이라는 객체로 업캐스팅이 되었음.
 	 
 	 
 	 for(int i=0; i<p2.length; i++) {
 		 if(p2[i] instanceof Student) {
-			 Student s = (Student)p2[i];
+			 Student s = (Student)p2[i];//학생만객체배열을 작성했음
 			 System.out.println(s.getClassLevel()+ "학년"+ s.getClassRoom() + "반 학생");
 		 }else {
 			 Teacher t =(Teacher)p2[i];

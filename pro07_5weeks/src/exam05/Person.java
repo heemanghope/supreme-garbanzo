@@ -1,17 +1,15 @@
 package exam05;
 
-public class Person {
+public class Person {       //public class Person
       private String name;
       private int age;
       private char gender;
       
-      
-      public Person(String name, int age) {
-    	  this.name = name;
-    	  this.age =age;
-    	  
-      }
-      
+    
+    public Person(String name, int age){
+         this.name =name;
+         this.age = age;
+    }
       
 	public String getName() {
 		return name;
@@ -28,17 +26,13 @@ public class Person {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
 	public char getGender() {
 		return gender;
 	}
-	
 	public void setGender(char gender) {
 		this.gender = gender;
 	}
       
-	
-
       }
 
    

@@ -52,3 +52,5 @@ public class Customer {
           System.out.printf("%s님이 %s 을(를) %,.0f 원에 구입하였습니다.\n", this.name,productName,price);
       }
   }
+
+ 

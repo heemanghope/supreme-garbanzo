@@ -27,8 +27,8 @@ public class Person {
 		this.age = age;
 	}
 	
-	public String getGender() {
-		if(gender == 'M') {
+	public String getGender() {  
+		if(gender == 'M') {       
 			return "남";
 		} else {
 			return "여";
@@ -39,8 +39,8 @@ public class Person {
 		this.gender = gender;
 	}
 
-	@Override
-	public String toString() {
+	@Override      //모든 객체는 tostring을 가지고 있다고 본다.
+	public String toString() {//어떠한 객체인지는 알지만 보여주고 싶은것, 정의하기
 		return "Person [name=" + name + ", age=" + age + ", gender=" + gender + "]";
 	}
 
@@ -50,14 +50,14 @@ public class Person {
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
+	public boolean equals(Object obj) { //외부에서 전달한 객체랑 내가가지고있는 값이랑 비교하는것이다.
+		if (this == obj)          //객체의 참조값.
 			return true;
 		if (obj == null)
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Person other = (Person) obj;
+		Person other = (Person) obj; //다운 캐스팅
 		return age == other.age && Objects.equals(name, other.name);
 	}
 	

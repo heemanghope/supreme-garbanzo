@@ -7,7 +7,8 @@ public class Parent { //캡슐화 private 접근제한자 //같은 클래스 안
    
    
    public Parent(int number) {
-	   this.number =number; //생성자는 상속이 안됩니다. //부모가 매개변수가 있는 생성자를 생성하게 되면 기본 생성자는 자동으로 생성되지 않는다.
+	   this.number =number; //생성자는 상속이 안됩니다. 
+	   //부모가 매개변수가 있는 생성자를 생성하게 되면 기본 생성자는 자동으로 생성되지 않는다.
 	   
 	   
    }
