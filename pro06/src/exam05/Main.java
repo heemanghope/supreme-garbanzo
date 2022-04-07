@@ -18,14 +18,11 @@ public class Main {
 		System.out.println(sList.findIndex("김주원"));
 		sList.remove("김주원");
 		System.out.println(sList.findIndex("김주원"));
-	    System.out.println(sList.length());
-	    sList.remove(3);
-	    System.out.println(sList.length());
-	    System.out.println(Arrays.toString(sList.getNames(1)));
-	    System.out.println(Arrays.toString(sList.getNames(1,4)));
-	    
-	
-	
+		System.out.println(sList.length()); //지워지고 5길이
+		sList.remove(3);//3학년을 다지움
+		System.out.println(sList.length());// 남은것 3길이
+		System.out.println(Arrays.toString(sList.getNames(1)));
+		System.out.println(Arrays.toString(sList.getNames(1, 4)));
 	}
 
 }

@@ -17,21 +17,21 @@ public class Main {
 		empArr[0] = e1;	empArr[1] = e2;	empArr[2] = e3;
 		empArr[3] = e4;	empArr[4] = e5;
 		
-		((DepartmentManager)e3).setTeamManager(true);
+		((DepartmentManager)e3).setTeamManager(true);//보너스
 		((DeputyGeneralManager)e4).setHeadManager(true);
 		((Director)e5).setHeadManager(true);
 		
 		
 		
 		for(int m =1; m <=30; m++) {
-			int month =m%12 == 0 ? 12 : m% 12;
+			int month =m%12 == 0 ? 12 : m% 12;   //나머지 연산 활용.
 			System.out.printf("%d 월 급여 지급 내역\n",month);
 			System.out.println("------------------------------------");
 		    for(int i = 0; i < empArr.length; i++) {			
                 empArr[i].payMonth();
                 empArr[i].bonus(month);
                 
-                if(empArr[i] instanceof TeamManager) {
+                if(empArr[i] instanceof TeamManager) {//다운 캐스팅
                 	((TeamManager)empArr[i]).teamPayBonus(); 	
                 }
                 if(empArr[i] instanceof HeadManager) {

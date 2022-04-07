@@ -11,7 +11,7 @@ public class DeputyGeneralManager extends DepartmentManager implements  HeadMana
 	}
 	
 	@Override
-	public void bonus(int month) {
+	public void bonus(int month) {//teammanager
 		switch(month) {
 			case 4: case 8: case 12:
 				double bonus = getSalary() * 0.25;

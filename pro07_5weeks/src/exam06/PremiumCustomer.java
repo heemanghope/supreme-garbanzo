@@ -15,6 +15,9 @@ public class PremiumCustomer extends Customer {
              	}
                  
                  
+          
+                 
+                 
                  @Override
              	public void buy(String productName, double price) {
              		price = _calcDiscount(price);

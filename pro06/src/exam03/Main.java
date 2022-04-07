@@ -54,11 +54,12 @@ public class Main {
 		// PersonList에 저장된 Person 객체를 삭제
 		System.out.println(pList.get(1).getName());     //배열 1번 삭제전 홍길동
 	    pList.remove(1);	// 1번 인덱스에 있는 객체 삭제
-		System.out.println(pList.get(1).getName());   //홍길동 삭제
+		System.out.println(pList.get(1).getName());   //홍길동 삭제 ,박지수가 원래 2번
 		
-		//System.out.println(pList.findIndex("박지수")); //배열 박지수찾기
-		//pList.remove("박지수");	// 박지수 이름을 찾아서 삭제
-		//System.out.println(pList.findIndex("박지수"));
+		System.out.println(pList.findIndex("박지수")); //배열 박지수찾기,1번위치에 있음
+		pList.remove("박지수");	// 박지수 이름을 찾아서 삭제
+		System.out.println(pList.findIndex("박지수"));//지워지면 -1
 	}
-
+//System.out.println(pList.findIndex(""));
+	//
 }

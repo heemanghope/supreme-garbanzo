@@ -11,7 +11,7 @@ public class AssistantManager extends Employee {
      }
 	 
 	 public void corpCard(int amount) {
-		 if(getSalary() * 0.015 * 10000 > getCorpCardTotal() + amount ){
+		 if(getSalary() * 0.015 * 10000 > getCorpCardTotal() + amount ){//자신의 급여 > 누적금액
 			 System.out.printf("%, d 원을 법인카드로 지불하였습니다.\n", amount);
 			 setCorpCardTotal(getCorpCardTotal() + amount);
 		 }else {

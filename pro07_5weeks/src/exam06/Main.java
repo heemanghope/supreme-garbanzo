@@ -2,7 +2,7 @@ package exam06;
 
 import java.util.Random;
 
-public class Main {
+public class Main {//다형성적용하기.
 
 	public static void main(String[] args) {
 		/*
@@ -14,11 +14,11 @@ public class Main {
 		 * 
 		 * 일반 고객 -> 프리미엄 고객 전환
 		 *     NormalCustomer n1 = new NormalCustomer("홍길동", 35, 'M');
-		 *     PremiumCustomer p1 = new PremiumCustomer(n1.getName(), n1.getAge(), n1.getGender());
+		 *     PremiumCustomer p1 = new PremiumCustomer(n1.getName(), n1.getAge(), n1.getGender());//이름.나이.성별
 		 */
 		
 		Random rand = new Random();
-		Customer[] cArr = new Customer[5];
+		Customer[] cArr = new Customer[5]; //객체배열
 		
 		cArr[0] = new NormalCustomer("홍길동", 35, 'M');
 		cArr[1] = new NormalCustomer("고길동", 35, 'M');
@@ -28,12 +28,12 @@ public class Main {
 		
 		for(int i = 0; i < 100; i++) {
 			int idx = rand.nextInt(cArr.length);
-			cArr[idx].buy("xxxxxx", (int)(rand.nextInt(500000) + 10000) / 10000 * 10000);
+			cArr[idx].buy("xxxxxx", (int)(rand.nextInt(300000) + 10000) / 10000 * 10000);
 			
 			if(cArr[idx] instanceof NormalCustomer) {
-				if(cArr[idx].getPriceTotal() > 1000000) {
+				if(cArr[idx].getPriceTotal() > 1000000) {//100만원을 넘어서면
 					PremiumCustomer p = new PremiumCustomer(cArr[idx].getName(), cArr[idx].getAge(), cArr[idx].getGender());
-					p.setPriceTotal(cArr[idx].getPriceTotal());
+					p.setPriceTotal(cArr[idx].getPriceTotal());//누적금액도 승계시킴.
 					cArr[idx] = p;
 					System.out.printf("%s님의 등급이 프리미엄 등급으로 상향되었습니다.\n", cArr[idx].getName());
 					System.out.printf("현재 적용된 할인율은 %.2f 입니다.", ((PremiumCustomer) cArr[idx]).getDiscount());

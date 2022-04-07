@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class StudentList {
 	/*
-	 * Student 클래스를 배열 형식으로 관리할 수 있게 만드는 클래스
+	 * Stduent 클래스를 배열 형식으로 관리할 수 있게 만드는 클래스
 	 * 이 클래스로 다음의 기능을 제공하도록 한다.
 	 *     - 학생 정보를 추가 할 수 있는 기능
 	 *       (반드시 이름, 나이, 학년, 반 정보가 저장되도록 한다.)
@@ -39,7 +39,7 @@ public class StudentList {
 		if(idx == -1) {
 			return;
 		}
-		sArr[idx].setClasslevel(classLevel);
+		sArr[idx].setClassLevel(classLevel);
 		sArr[idx].setClassRoom(classRoom);
 	}
 	
@@ -57,13 +57,13 @@ public class StudentList {
 	
 	public int[] getClassLevelRoom(String name) {
 		int idx = _findIndex(name);
-		return new int[] {sArr[idx].getClasslevel(), sArr[idx].getClassRoom()};
-	}
+		return new int[] {sArr[idx].getClassLevel(), sArr[idx].getClassRoom()};
+	} //                           0번 인덱스에는 학년            1번 인덱스에는 반
 	
-	public String[] getNames(int classLevel) {
-		String[] result = null;
+	public String[] getNames(int classLevel) {//학년 정보의 모든 이름
+		String[] result = null;//String[] result = new String[0];
 		for(int i = 0; i < sArr.length; i++) {
-			if(classLevel == sArr[i].getClasslevel()) {
+			if(classLevel == sArr[i].getClassLevel()) {
 				if(result == null) {
 					result = new String[0];
 				}
@@ -78,7 +78,7 @@ public class StudentList {
 	public String[] getNames(int classLevel, int classRoom) {
 		String[] result = null;
 		for(int i = 0; i < sArr.length; i++) {
-			if(classLevel == sArr[i].getClasslevel() &&
+			if(classLevel == sArr[i].getClassLevel() &&
 					classRoom == sArr[i].getClassRoom()) {
 				if(result == null) {
 					result = new String[0];
@@ -117,7 +117,7 @@ public class StudentList {
 	
 	private int _findIndex(int classLevel) {
 		for(int i = 0; i < sArr.length; i++) {
-			if(classLevel == sArr[i].getClasslevel()) {
+			if(classLevel == sArr[i].getClassLevel()) {
 				return i;
 			}
 		}

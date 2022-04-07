@@ -7,7 +7,7 @@ public class Customer {
       private String name;
       private int age;
       private char gender;
-      private double priceTotal;
+      private double priceTotal;//누적구입액(프리미엄,노멀)다 사용됨.
       
       public Customer(String name,int age, char gender) {
     	  this.name =name;

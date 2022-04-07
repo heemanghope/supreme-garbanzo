@@ -69,14 +69,14 @@ public class Main {
 	 
 	 
 	 for(int i=0; i<p2.length; i++) {
-		 if(p2[i] instanceof Student) {
+		 if(p2[i] instanceof Student) {//어떠한 객체로 만들어진 instance인가
 			 Student s = (Student)p2[i];//학생만객체배열을 작성했음
 			 System.out.println(s.getClassLevel()+ "학년"+ s.getClassRoom() + "반 학생");
 		 }else {
 			 Teacher t =(Teacher)p2[i];
 			 System.out.println(t.getClassLevel()+ "학년" + t.getClassRoom() + "반 " + t.getSubject() + " 담당 선생님");
 		         }
-		  //학생 쪽만 캐스팅됨.
+		
 			 }
 	
 	}
