@@ -29,7 +29,7 @@ public class Main {
 			System.out.println("------------------------------------");
 		    for(int i = 0; i < empArr.length; i++) {			
                 empArr[i].payMonth();
-                empArr[i].bonus(month);
+                empArr[i].bonus(month);         
                 
                 if(empArr[i] instanceof TeamManager) {//다운 캐스팅
                 	((TeamManager)empArr[i]).teamPayBonus(); 	
@@ -42,7 +42,7 @@ public class Main {
 			}
 			
 			if((rand.nextInt(9) + 1) % 4 == 0) {
-				int idx = rand.nextInt(4) + 1;
+				int idx = rand.nextInt(4) + 1;//누가 지불했는지 알아야한다.
 				System.out.println(empArr[idx].getName() + "가(이) 법카 쏜다~");
 				((AssistantManager)empArr[idx]).corpCard(100000);
 			}

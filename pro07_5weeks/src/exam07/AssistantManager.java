@@ -10,10 +10,10 @@ public class AssistantManager extends Employee {
     	 setSalary(3000);
      }
 	 
-	 public void corpCard(int amount) {
+	 public void corpCard(int amount) { //private CorpCardTotal로 접근제한이 걸린다.  그러므로 get을 붙여서 접근가능하게/가져오게 만들어준다.
 		 if(getSalary() * 0.015 * 10000 > getCorpCardTotal() + amount ){//자신의 급여 > 누적금액
 			 System.out.printf("%, d 원을 법인카드로 지불하였습니다.\n", amount);
-			 setCorpCardTotal(getCorpCardTotal() + amount);
+			 setCorpCardTotal(getCorpCardTotal() + amount);//설정할때는 setCorpCard로 만들어준다.
 		 }else {
 			 System.out.println("법인 카드의 한도를 초과하였습니다.");
 			 System.out.printf("현재까지 사용액은 %,d원 입니다.\n", corpCardTotal);

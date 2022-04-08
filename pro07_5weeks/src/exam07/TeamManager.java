@@ -4,4 +4,3 @@ public interface TeamManager {
      public void teamPayBonus();
      
 }
-//teammanager의 getter setter 만들어줌.
