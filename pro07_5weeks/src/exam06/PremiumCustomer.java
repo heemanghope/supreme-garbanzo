@@ -3,8 +3,9 @@ package exam06;
 
 
 public class PremiumCustomer extends Customer {
-                private double discount;
-                
+              
+	private double discount;
+            
 
                  public PremiumCustomer(String name, int age, char gender) {
                 	 super(name, age , gender);
@@ -17,7 +18,7 @@ public class PremiumCustomer extends Customer {
                  
           
                  
-                 
+                 //프리미엄에서만 할인률을 뜻하는 재정의하는 오버라이딩하기
                  @Override
              	public void buy(String productName, double price) {
              		price = _calcDiscount(price);

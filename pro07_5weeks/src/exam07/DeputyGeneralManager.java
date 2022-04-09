@@ -1,7 +1,7 @@
 package exam07;
 
-// 차장
-public class DeputyGeneralManager extends DepartmentManager implements  HeadManager {
+// 차장                                                       인터페이스 - 다중상속이 가능하다.TeamManager, HeadManager 
+public class DeputyGeneralManager extends DepartmentManager implements HeadManager {
 	
 	private boolean headManager;	// 본부장직 수행 여부를 구분하기 위한 멤버 변수
 	

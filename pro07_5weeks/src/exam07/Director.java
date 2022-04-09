@@ -1,7 +1,7 @@
 package exam07;
 
 //부장
-public class Director extends DeputyGeneralManager {
+public class Director extends DeputyGeneralManager implements HeadManager {
 	
 	
 	//private boolean teamManager;

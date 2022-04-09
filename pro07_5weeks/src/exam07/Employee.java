@@ -1,6 +1,6 @@
 package exam07;
 
-public class Employee {
+public abstract class Employee {
        private String name;
        private int  age;
        private char gender;

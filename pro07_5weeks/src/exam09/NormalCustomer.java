@@ -2,25 +2,13 @@ package exam09;
 
 public class NormalCustomer extends Customer {
 	public NormalCustomer(String name, int age, char gender) {
-		super(name, age, gender); 
+		super(name, age, gender);
 	}
 	
 	@Override
 	public void buy(String productName, double price) {
-		System.out.printf("%s님이 %s을(를) %,.0f 원에 구입하였습니다.");
+		System.out.printf("%s님이 %s을(를) %,.0f원에 구입하였습니다.\n", getName(), productName, price);
 		this.setPriceTotal(this.getPriceTotal() + price);
-	}
-
-	@Override
-	public void add(String productName) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void add(String productName, int count) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -42,7 +30,7 @@ public class NormalCustomer extends Customer {
 	}
 
 	@Override
-	public String[] listUp(int coount) {
+	public String[] listUp(int count) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -54,13 +42,13 @@ public class NormalCustomer extends Customer {
 	}
 
 	@Override
-	public void pay(String productCode, int count) {
+	public String pay(String productCode, int count) {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override
-	public void cancel(String productCode) {
+	public void cancel(String produtCode) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -73,6 +61,12 @@ public class NormalCustomer extends Customer {
 
 	@Override
 	public void refund(String productName) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void add(String productName, int count) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -100,4 +94,6 @@ public class NormalCustomer extends Customer {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	
 }

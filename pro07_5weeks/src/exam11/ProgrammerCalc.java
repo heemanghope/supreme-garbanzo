@@ -1,6 +1,6 @@
 package exam11;
 
-public class ProgrammerCalc extends BasicCalculator implements ProgrammerOper {
+public class ProgrammerCalc extends Calculator implements ProgrammerOper {
 
 	@Override
 	public String binary(int n1) {
@@ -10,7 +10,7 @@ public class ProgrammerCalc extends BasicCalculator implements ProgrammerOper {
 
 	@Override
 	public String octal(int nn1) {
-		
+		// TODO Auto-generated method stub
 		return null;
 	}
 
