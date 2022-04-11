@@ -13,7 +13,7 @@ public class Sample06 {
 		 * Date 클래스
 		 *       - 시스템으로 부터 현재 날짜,시간 정보를 가져와서 사용 할 수 있게 만들어진 클래스
 		 */
-        Date date = new Date();  //생성하는 것.
+        Date date = new Date();
         System.out.println(date);
         
         
@@ -38,13 +38,14 @@ public class Sample06 {
        Calendar c = Calendar.getInstance();
 	
 	   System.out.println(c.get(Calendar.YEAR));
-	   System.out.println(c.get(Calendar.MONTH)+1);
+	   System.out.println(c.get(Calendar.MONTH)+1);//0부터 시작하므로.
 	   System.out.println(c.get(Calendar.DATE));
 	   System.out.println(c.get(Calendar.HOUR));
 	   System.out.println(c.get(Calendar.MINUTE));
 	   System.out.println(c.get(Calendar.SECOND));
 	  
-	   
+	 //  c.add(Calendar.DATE,1);
+	 //  c.add(Calendar.MONTH,-1);
 	   
 	   switch(c.get(Calendar.DAY_OF_WEEK)) {
 	   case Calendar.MONDAY :

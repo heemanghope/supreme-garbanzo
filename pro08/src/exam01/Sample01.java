@@ -10,10 +10,10 @@ public class Sample01 {
 		 * String 생성자
 		 */
 		String s1 = new String();
-		String s2 = new String("생성자");
+		String s2 = new String("생성자");//문자열넣기
 		
-		char[] cArr = new char[] {'A','B','C','D'};
-		String s3 = new String(cArr);
+		char[] cArr = new char[] {'A','B','C','D'};//문자배열을 만들기
+		String s3 = new String(cArr);//문자배열을 생성자안에..
 		
 		byte[] bArr = new byte[] {65, 66,67,68};
 		
@@ -43,30 +43,30 @@ public class Sample01 {
          System.out.printf("s5.charAt(%d) ->%c\n" ,i,c1);
          
          } 
-         s5 ="Java Programming Language";
-         boolean isContains =s5.contains("Program");
+         s5 ="Java Programming Language";//문자열안에서 지정된 문자열이 포함되었는지 알고싶다.
+         boolean isContains =s5.contains("Program");//대문자
          System.out.println("s5.contains(\"Program\") -> " +isContains);
          
-         isContains =s5.contains("program");
+         isContains =s5.contains("program");//소문자
          System.out.println("s5.contains(\"program\") -> " +isContains);
          
          
-         int location;
+         int location;//어디 위치에 있니?
          location = s5.indexOf("Program");
          System.out.println("s5.indexOf(\"program\") -> " +location);
          
          
   
          location = s5.indexOf("program");
-         System.out.println("s5.indexOf(\"program\") -> " +location);
+         System.out.println("s5.indexOf(\"program\") -> " +location);//5번 인덱스에 위치.
          
          s5 = s5.replace("Program", "프로그램");
-         System.out.println("s5.replace(\"Program\", \"프로그램\") -> " +s5);
+         System.out.println("s5.replace(\"Program\", \"프로그램\") -> " +s5);//-1 없음
          
          s5 = s5.replace("java", "자바");
          System.out.println("s5.replace(\"java\", \"자바\") -> " +s5);
          
-         String[] sArr;
+         String[] sArr;//문자열 배열
          sArr =s5.split( " ");
          System.out.println("s5.split(\"\") -> " + Arrays.toString(sArr));
          
@@ -85,8 +85,12 @@ public class Sample01 {
          
         		 
          System.out.println("s5.substring(3,6) -> " + s5.substring(3,6)); //원하는 범위만큼 잘라내기
-         System.out.println("s5.substring(7,11) -> " + s5.substring(7,11)); //원하는 범위만큼 잘라내기
+         System.out.println("s5.substring(7,11) -> " + s5.substring(7,11)); //원하는 범위만큼 잘라내기 왜 +1???
+         System.out.println("s5.substring(7,11) -> " + s5.substring(s5.indexOf("Meth"),s5.indexOf("Meth")+4)); //원하는 범위만큼 잘라내기 왜 +1???
         
+         
+         
+         //index는 0부터 !!
          
          s6 = "Meth";
  		System.out.println("s5.substring(7, 11) -> " + s5.substring(s5.indexOf(s6), s5.indexOf(s6) + s6.length()));
@@ -97,7 +101,8 @@ public class Sample01 {
  		
  		
  		
- 		s6 ="02-ertf-5678";      
+ 		s6 ="02-ertf-5678"; //세자리 숫자아님 숫자가들어가야하는데 문자가 들어가면 안됨.     
+ 		
  		boolean isMatch =s6.matches("\\d{3}-\\d{4}-\\d{4}"); 
  		//  정규표현식 문자열이라고함.     숫자3자 - 숫자4자 - 숫자4자
  		System.out.println("전화번호 형식과 일치합니까? ->" + isMatch);

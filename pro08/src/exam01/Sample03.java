@@ -16,49 +16,43 @@ public class Sample03 {
 		 */
 
 	//StringBuilder sb = new StringBuilder();
-		StringBuffer sb =new StringBuffer();
+	StringBuffer sb =new StringBuffer();
 		
-		
-		
-		
-	sb.append("문자열");//추가하는 것이다.
-	sb.append("을 뒤에");
-	sb.append("추가하는");
-	sb.append("append 메서드");//append는 뒤에만 붙이는 것임.
-	System.out.println(sb);
-	
-	sb.insert(0,"원하는 ");//instert 앞에 
-	sb.insert(4,"위치에 ");
-	sb.insert(8,"문자열을 ");
-	sb.insert(13,"삽입하는 ");
-	sb.insert(18,"insert 메서드\n"); //개행 \n 으로 다음줄로 떨어뜨려줌.
-	System.out.println(sb);
-	
-	
-	sb.setCharAt(13, '추');
-	sb.setCharAt(14, '가');
-	System.out.println(sb);
-	
-	sb.replace(25, 28, "Method");  //String 문자열에서 replace, 교체 바꾸기
-	sb.replace(50, 55, "Method");  
-	System.out.println(sb);
-	
-	int idx =sb.indexOf("문자열");
-	sb.replace(idx, idx+3, "String");
-	idx = sb.indexOf("문자열");
-	sb.replace(idx, idx+3, "String");
-	System.out.println(sb);
-	
-	
-	idx =sb.indexOf("을");
-	sb.delete(idx, idx+1); //문자하나이상 delete
-	System.out.println(sb);
-	
-	sb.deleteCharAt(sb.indexOf("을")); //문자 하나 deleteCharAt
-	System.out.println(sb);
-	
+	     sb.append("문자열");
+	     sb.append("을 뒤에");
+	     sb.append("추가하는");
+	     sb.append("append 메서드\n");
+	     System.out.println(sb);
+	     
+	     sb.insert(0, "원하는 ");
+	     sb.insert(4, "위치에 ");
+	     sb.insert(8, "문자열을 ");
+	     sb.insert(13,"삽입하는 ");
+	     sb.insert(18,"insert 메서드\n ");
+	     System.out.println(sb);
+	     
+	     sb.setCharAt(13, '추');
+	     sb.setCharAt(14, '가');
+	     System.out.println(sb);
+	     
+	     sb.replace(25, 28, "Method");
+	     sb.replace(50, 53, "Method");//원하는 위치 찾기.
+	     System.out.println(sb);
+	     
+	    
+	     int idx =sb.indexOf("문자열");
+	     sb.replace(idx, idx+3, "String");
+	     idx =sb.indexOf("문자열");
+	     sb.replace(idx, idx+3, "String");
+	     System.out.println(sb);
+	     
+	     idx= sb.indexOf("을");
+	     sb.delete(idx, idx+1); //한글자이니까 +1시키기//한자이상
+	     System.out.println(sb);
+	     
+	     sb.deleteCharAt(sb.indexOf("을"));//한글자delete CharAt
+	     System.out.println(sb);
+	     
 	}
 	
-	
-
 }
