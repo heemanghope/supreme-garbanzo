@@ -40,11 +40,13 @@ SELECT E.EMPLOYEE_ID
          , EMAIL
          , PHONE_NUMBER
          , HIRE_DATE
-         , SELECT JOB_TITLE FROM JOBS J WHERE E.JOB_ID = J.JOB_ID) AS JOB_TITLE 
+         , (SELECT JOB_TITLE FROM JOBS J WHERE E.JOB_ID = J.JOB_ID) AS JOB_TITLE 
          , SALARY
          , COMMISSION_PCT
          , MANAGER_ID
-          (SELECT DEPARTMENT_NAME FROM DEPARTMENT D WHERE E.DEPARTMNENT_ID = D.DEPARTMENT_ID AS DEPARTMENT_NAME);
+         , (SELECT DEPARTMENT_NAME FROM DEPARTMENTS D WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID) AS DEPARTMENT_NAME
+    FROM EMPLOYEES E;
+   
 /*
  * DEPARTMENTS 테이블과 LOCATIONS 테이블을 사용하여 각 부서가 어느 지역에 위치하고
  * 있는지 JOIN 을 활용하여 조회한다.
@@ -56,6 +58,7 @@ SELECT E.EMPLOYEE_ID
        ,D.MANAGER_ID
        ,L.LOCATION_ID
        ,L.STREET_ADDRESS
+       ,L.POSTAL_CODE
        ,L.CITY
        ,L.STATE_PROVINCE
        ,L.COUNTRY_ID
@@ -81,23 +84,23 @@ SELECT E.EMPLOYEE_ID
  * LOCATIONS 테이블과 COUNTRIES 테이블을 사용하여 각 지역이 
  * 어느 나라에 위치하고 있는지 JOIN 을 활용하여 조회 한다. 
  */
-SELECT , R.REGION_NAME
+SELECT R.REGION_NAME
      , C.COUNTRY_NAME
-     , L.CITY || ' ' || DECODE(L.STATE_PROVINCE,NULL,''),CONCAT(L.STREET_ADDRESS )||  AS ADDRESS
+     , L.CITY ||''|| DECODE(L.STATE_PROVINCE,NULL,' ',CONCAT(L.STATE_PROVINCE, ' ')) || L.STREET_ADDRESS AS ADDRESS
      , L.POSTAL_CODE
     FROM LOCATIONS L
     JOIN COUNTRIES C
       ON L.COUNTRY_ID = C.COUNTRY_ID
-   JOIN REGIONS R
+    JOIN REGIONS R
       ON C.REGION_ID = R.REGION_ID
-    ORDER BY 1,2;
+   ORDER BY 1,2;
   
 SELECT * FROM LOCATIONS; 
 SELECT * FROM COUNTRIES;
 SELECT * FROM REGIONS;
 
 /*
- * 대륙별 직원 수를 파악하기 위한 조회 쿼리를 만든다.
+ * 대륙별,나라별 직원 수를 파악하기 위한 조회 쿼리를 만든다.
  */
 SELECT DECODE(GROUPING(R.REGION_NAME), 1,'총계', R.REGION_NAME) AS 대륙구분  
      , DECODE(GROUPING(C.COUNTRY_NAME), 1, DECODE(GROUPING(R.REGION_NAME),1,' ','소계'), C.COUNTRY_NAME) AS 나라구분
@@ -116,9 +119,22 @@ SELECT DECODE(GROUPING(R.REGION_NAME), 1,'총계', R.REGION_NAME) AS 대륙구�
 /*
  * 부서별 최고참, 막내사원 구하기
  */
-
-  
-  
+SELECT E1.EMPLOYEE_ID
+      ,E1.DEPARTMENT_ID
+      ,E1.HIRE_DATE
+      ,CASE WHEN E2.MX =E1.HIRE_DATE THEN '막내'
+            WHEN E2.MN =E1.HIRE_DATE THEN '고참'
+      END AS 구분
+      FROM EMPLOYEES E1
+      JOIN (SELECT DEPARTMENT_ID
+                 , MAX(HIRE_DATE) AS MX
+                 , MIN(HIRE_DATE) AS MN
+               FROM EMPLOYEES 
+              GROUP BY DEPARTMENT_ID
+              )E2
+          ON E1.DEPARTMENT_ID =E2.DEPARTMENT_ID
+        AND (E1.HIRE_DATE =E2.MX OR E1.HIRE_DATE =E2.MN)
+       ORDER BY 2;
   
   
   
@@ -129,23 +145,23 @@ SELECT E1.EMPLOYEE_ID
      , E1.FIRST_NAME
      , E1.LAST_NAME
      , E2.나라구분
-     , CASE WHEN E2.최고급여 =  E1.SALARY * (1 + NVL(E1.COMMISSION_PCT,0)) THEN '최고급여'
-                 E2.최저급여 =  E1.SALARY * (1 + NVL(E1.COMMISSION_PCT,0)) THEN '최저급여'
-         END AS 구분
+     , CASE WHEN E2.최고급여 = E1.SALARY * (1 + NVL(E1.COMMISSION_PCT,0)) THEN '최고급여'
+            WHEN E2.최저급여 = E1.SALARY * (1 + NVL(E1.COMMISSION_PCT,0)) THEN '최저급여'
+        END AS 구분
       , E1.SALARY * (1 + NVL(E1.COMMISSION_PCT,0)) AS 급여
-     FROM EMPLOYEES E1
-     JOIN (SELECT C.COUNTRY_NAME AS 나라구분
-                , MAX(E.SALARY * (1+ NVL(E.COMMISSION_PCT,0))) AS 최고급여
-                , MIN(E.SALARY * (1+ NVL(E.COMMISSION_PCT,0))) AS 최저급여
-          FROM EMPLOYEES E
-          JOIN DEPARTMENTS D
-          ON E.DEPARTMENT_ID = D.DEPARTMENT_ID
-          JOIN LOCATIONS L
-          ON D.LOCATION_ID =L.LOCATION_ID
-          JOIN COUNTRIES C
-          ON L.COUNTRY_ID = C.COUNTRY_ID
-          GROUP BY C.COUNTRY_NAME
-          )E2
-    ON E2.최고급여 = E1.SALARY * (1 + NVL(E1.COMMISSION_PCT,0))
-    OR E2.최저급여 = E1.SALARY * (1 + NVL(E1.COMMISSION_PCT,0))
-  ORDER BY 4;
+       FROM EMPLOYEES E1
+       JOIN(SELECT C.COUNTRY_NAME AS 나라구분
+                 , MAX(E.SALARY * ( 1+ NVL(E.COMMISSION_PCT,0))) AS 최고급여
+                 , MIN(E.SALARY * ( 1+ NVL(E.COMMISSION_PCT,0))) AS 최저급여
+                 FROM EMPLOYEES E
+                 JOIN DEPARTMENTS D
+                   ON E.DEPARTMENT_ID =D.DEPARTMENT_ID
+                 JOIN LOCATIONS L
+                   ON D.LOCATION_ID = L.LOCATION_ID
+                 JOIN COUNTRIES C
+                   ON L.COUNTRY_ID = C.COUNTRY_ID
+                  GROUP BY C.COUNTRY_NAME
+                )E2
+             ON E2.최고급여 = E1.SALARY * (1+NVL(E1.COMMISSION_PCT, 0))
+             OR E2.최저급여 = E1.SALARY * (1+NVL(E1.COMMISSION_PCT, 0))
+             ORDER BY 4;
