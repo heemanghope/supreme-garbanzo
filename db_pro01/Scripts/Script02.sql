@@ -78,6 +78,9 @@ SELECT *
   SELECT *
      FROM EMPLOYEES 
     WHERE JOB_ID  LIKE '%&____' ESCAPE '&';--이스케이프 문자
+  SELECT *
+     FROM EMPLOYEES 
+    WHERE JOB_ID  LIKE '%&_____' ESCAPE '&';--이스케이프 문자
     
   SELECT *
      FROM EMPLOYEES 
