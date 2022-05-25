@@ -16,7 +16,7 @@ CREATE TABLE   ORDERS(
     , id           VARCHAR2(20)
     , carname      VARCHAR2(20)   NOT NULL 
     , dates         DATE 
-    , time         NUMBER
+    , otime         NUMBER
 
 );
 

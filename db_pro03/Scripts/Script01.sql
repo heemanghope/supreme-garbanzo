@@ -16,10 +16,11 @@ BEGIN
 	 * 프로그래밍 로직을 작성하는 영역 
 	 */
 	DBMS_OUTPUT.PUT_LINE('HELLO PL/SQL');
+END;
+/
+
 EXCEPTION
     /*
      *  예외처리 영역
      */
 
-END;
-/
