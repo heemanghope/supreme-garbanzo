@@ -40,13 +40,24 @@ public class Main {
 		System.out.print("이름 : ");
 		String userInput = sc.nextLine();
 		
-		if(db.isExists(userInput)) {
+		//int[] record =db.load(userInput);
+		//if(Record == null ) {
+		//System.out.println("이전 전적 기록이 없습니다. 새로운 전적 기록으로 진행합니다.");
+		// recornd = new int[3];
+		//}else {
+		//     System.out.println("이전 전적기록을 찾았습니다. 현재 게임에 반영하여 진행합니다.");
+		//}
+		// uPlay.setRecord(record);
+		int[] record = db.getRecord(userInput);
+		
+		if(db.isExists(userInput)) { //if(record ==null //사용자가 들어있는지없는지 확인하는것.
 			System.out.println("이전 전적 기록을 찾았습니다. 현재 게임에 반영하여 진행합니다.");
 		} else {
+			//record =new int[3])전적 기록  8 8 10 이런식으로 기록됨.
 			System.out.println("이전 전적 기록이 없습니다. 새로운 전적 기록으로 진행합니다.");
 		}
 		
-		int[] record = db.getRecord(userInput);
+	
 		
 		uPlay.setName(userInput);
 		uPlay.setRecord(record);

@@ -51,4 +51,8 @@ public class Record {
 	public void setRecord(int[] score) {
 		this.score= score;
 	}
-}
+	
+	
+		
+	}
+
