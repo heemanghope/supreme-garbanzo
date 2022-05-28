@@ -24,7 +24,7 @@ public class Sample01 {
 	    res1 = aMap.put("가", 400);//기존에 있던 값이 튀어나온것임 (100)
 	    System.out.println(res1 + " " + aMap);
 	    
-	    res1 = aMap.put("라", 500);//기존에 있던 값이 튀어나온것임 (100)
+	    res1 = aMap.put("라", 500);//아예없으면 null
 	    System.out.println(res1 + " " + aMap);
 	    
 	    boolean res2;
