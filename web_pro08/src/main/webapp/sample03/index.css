@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+
+
+.notice-control  .notice-label{
+	width:100%;
+    color: black;
+    vertical-align: top;
+    
+}
+
+.notice-control .notice-input{
+	width:20%;
+	padding:0.1rem;
+}
+
+table {
+    width: 100%;
+  }
+
+.colored-orange{
+	 background-color: rgb(255,156,122);
+	 color:rgb(255,241,226);
+	 text-align: center;
+	 text-decoration-style: solid;
+}
+
+.colored{
+	background-color: rgb(255,253,223);
+}
+
+.colored  .go{
+	background-color: rgb(241 ,241, 242);
+	text-align:center;
+	width:90px;
+}
+
+th{
+	padding: 0.5rem;
+}
