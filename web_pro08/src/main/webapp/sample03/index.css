@@ -25,16 +25,12 @@ table {
 	 text-decoration-style: solid;
 }
 
-.colored{
+td{
 	background-color: rgb(255,253,223);
 }
 
-.colored  .go{
-	background-color: rgb(241 ,241, 242);
-	text-align:center;
-	width:90px;
-}
 
-th{
+
+table th{
 	padding: 0.5rem;
 }

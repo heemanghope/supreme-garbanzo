@@ -6,11 +6,13 @@
     <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 <body>
- <form action=“insert.no” method=“post”>
  <fieldset>
+ <form action=“insert.no” method=“post”>
 	  <legend>공지사항 작성하기</legend>  
 	  <div class="notice-control">                                   
-	  <label ><b>제목</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="notice-input" type ="text" name="title"  placeholder="제목을 입력하시오." required><br>
+	  <label ><b>제목</b></label>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <input class="notice-input" type ="text" name="title"  placeholder="제목을 입력하시오." required><br>
 	  <label class="notice-label"><b>내용</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="content" cols="30" rows="10" style="resize:none;" placeholder="내용을 입력하시오." required ></textarea><br> 
 	  <label><b>첨부파일</b></label><input type="file" name="uploadFile"><br><br><br>
 	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -21,6 +23,7 @@
 <hr>
 <br>
  <table border="1">
+ <tbody>
   <tr class="colored-orange">
      <th>번호</th>
      <th colspan="2">제목</th>
@@ -28,42 +31,42 @@
      <th>작성일</th>
      <th>조회수</th>
   </tr>
-  <tr class="colored">
+  <tr>
      <td>9</td>
      <td>공지사항 제목 9</td>
-     <td class="go">바로가기</td>
+     <td><button type="button">바로가기</button></td>
      <td>user01</td>
      <td>2021-03-29</td>
      <td>34</td>
   </tr>
-  <tr class="colored">
+  <tr>
      <td>6</td>
      <td>공지사항 제목 6</td>
-     <td class="go">바로가기</td>
+     <td><button type="button">바로가기</button></td>
      <td>answ445</td>
      <td>2021-03-12</td>
      <td>67</td>
   </tr>
-  <tr class="colored">
+  <tr >
      <td>3</td>
      <td>공지사항 제목 3</td>
-     <td class="go">바로가기</td>
+     <td><button type="button">바로가기</button></td>
      <td>testg12</td>
      <td>2021-03-01</td>
      <td>98</td>
   </tr>
-  <tr class="colored">
+  <tr>
      <td>2</td>
      <td>공지사항 제목 2</td>
-     <td class="go">바로가기</td>
+     <td><button type="button">바로가기</button></td>
      <td>palwe3</td>
      <td>2021-01-02</td>
      <td>85</td>
   </tr>
-  <tr class="colored">
+  <tr>
      <td>1</td>
      <td>공지사항 제목 1</td>
-     <td class="go">바로가기</td>
+     <td><button type="button">바로가기</button></td>
      <td>xml23</td>
      <td>2020-12-24</td>
      <td>124</td>
@@ -72,6 +75,7 @@
      <td colspan="4">전체공지사항 갯수</td>
      <td colspan="2">5개</td>
   </tr>
+  </tbody>
  </table>
  </form>
 </body>
