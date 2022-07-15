@@ -20,15 +20,15 @@
     <button type="submit">POST 전송</button>
   </form>
   <hr>
-  <h2>request.getParameter(name)</h2>
+  <h2>request.getParameter(name)</h2> 
   <p>
-     request.getParameter(name)=> <%=request.getParameter("param_name") %>
+     request.getParameter(name)=> <%=request.getParameter("param_name") %><%--?물음표 이후에 나온다. --%>
   <br>
      name은 HTML 폼 관련속성 중 name 속성에 정의한 속성값이다.
   </p>
   <form action="./request" method="get">
       <div>
-           <input type="text" name="param_name">     
+           <input type="text" name="param_name"> <%--파라메터 값 일치해야함 --%>    
        </div>
        <div>
          <button type="submit"> 전송</button>
@@ -49,13 +49,15 @@
              } 
           }
     %>
+  
     
+ 
    
   </p>
    <form action="./request" method="get"> 
       <div>
-           <input type="checkbox" name="param_chk" value="a">     
-           <input type="checkbox" name="param_chk" value="b">     
+           <input type="checkbox" name="param_chk" value="a">     <%--이름은 같은데 value(값)이 다르게 :checkbox --%>
+           <input type="checkbox" name="param_chk" value="b">     <%-- 복수선택.배열사용 --%>
            <input type="checkbox" name="param_chk" value="c">     
            <input type="checkbox" name="param_chk" value="d">     
        </div>
@@ -105,7 +107,7 @@
    <h2>request.getSession()</h2>
    <p>
      request.getSession() -> <%=request.getSession() %>
-     JSESSIONID = "<%=request.getSession().getId() %>"
+     JSESSIONID = "<%=request.getSession().getId() %>"<%--세션,로그인 정보를 세션에 담아놓기 가능 --%>
     </p>
     <form action="./request" method="get">
         <button type="submit">전송</button>
