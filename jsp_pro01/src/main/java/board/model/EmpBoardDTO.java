@@ -9,8 +9,8 @@ public class EmpBoardDTO {
 	private String content;
 	private int empId;
 	private Date createDate;
-	private int viewCnt;
-	private int like;
+	private int viewCnt; //추가
+	private int like;  //추가
 	
 	public int getId() {
 		return id;

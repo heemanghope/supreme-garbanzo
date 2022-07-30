@@ -80,7 +80,7 @@ public class EmpBoardDAO {
 	}
 
 	
-
+//사내 게시판 기능 구현
 	
 
 

@@ -17,7 +17,7 @@ public class EmpBoardService {
 		EmpBoardDAO dao = new EmpBoardDAO();
 		
 		int seq = dao.getNextSeq(); //가지고 온 번호로
-		data.setId(seq);
+		data.setId(seq); //sequence 넣기
 		
 		boolean result = dao.insertData(data);
 		
