@@ -45,6 +45,28 @@ public class EmpBoardDAO {
 		return res == 1 ? true : false;
 	}
 	
+	public EmpBoardStaticsDTO  selectStatics(EmpBoardStaticsDTO staticsData) {
+		String mapperId = String.format(mapper, "selectStatics");
+		EmpBoardStaticsDTO data = session.selectOne(mapperId,staticsData);
+		return data;
+		
+	}
+	
+	
+
+	public boolean insertStatics(EmpBoardStaticsDTO staticsData) {
+		String mapperId = String.format(mapper, "insertStatics");
+		int res= session.insert(mapperId,staticsData);
+		return res == 1 ? true : false;
+	}
+	
+    public boolean updateStatics(EmpBoardStaticsDTO staticsData) {
+    	String mapperId = String.format(mapper, "updateStatics");
+		int res= session.update(mapperId,staticsData);
+		return res == 1 ? true : false;
+		
+	}
+ 	
 	public void commit() {
 		this.session.commit();
 	}
@@ -56,4 +78,11 @@ public class EmpBoardDAO {
 	public void close() {
 		this.session.close();
 	}
+
+	
+
+	
+
+
+
 }
