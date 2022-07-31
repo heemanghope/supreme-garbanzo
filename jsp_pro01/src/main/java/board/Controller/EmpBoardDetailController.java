@@ -36,10 +36,10 @@ public class EmpBoardDetailController extends HttpServlet {
 		if(data != null) {
 			HttpSession session =request.getSession();
 			
-		    service.incViewCnt(session,data);
+		    service.incViewCnt(session,data);//추천수
 
+		    EmpsDTO empData= empsService.getId("" + data.getEmpId());
 			
-			 EmpsDTO empData= empsService.getId("" + data.getEmpId());
 		
 		
 		    

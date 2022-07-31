@@ -60,7 +60,7 @@ public class EmpBoardService {
 			dao.insertStatics(staticsData);
 		} else {
 			long timeDiff = new Date().getTime() - staticsData.getLatestViewDate().getTime();
-			if(timeDiff / (1000 * 60 * 60 * 24) >= 7) {
+			if(timeDiff / (1000 * 60 * 60 * 24) >= 7) {//일주일에 한번만 조회수를 올릴 수있음
 				result = dao.updateViewCnt(data);
 				dao.updateStatics(staticsData);
 			}
@@ -85,6 +85,5 @@ public class EmpBoardService {
 			dao.close();
 		}
 		dao.rollback();
-		dao.close();
 	}
 }
