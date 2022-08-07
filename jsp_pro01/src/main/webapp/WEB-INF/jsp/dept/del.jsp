@@ -37,7 +37,7 @@
 			}
 	%>
 			<div>
-				<button type="button" onclick="location.href='../depts';">돌아가기</button>
+				<button type="button" onclick="location.href='../depts';">돌아가기</button><!-- ..상대경로 -->
 			</div>
 	<%
 		}

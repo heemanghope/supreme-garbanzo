@@ -7,12 +7,12 @@ public enum DEPT_SERVICE_STATUS {
 	LOC_ID_NOT_EXISTS(-3, "지역 ID 존재하지 않음"),
 	DEPT_ID_NOT_EXISTS(-4,"부서 ID 존재하지 않음");
 	
-	public final int value; //접근제한자
+	public final int value; //접근제한자(final)
 	public final String msg;
 	
 	DEPT_SERVICE_STATUS(int value, String msg) {
-		this.value = value;
-		this.msg = msg;
+		this.value = value; //값
+		this.msg = msg;  //메시지
 	}
 	
 }

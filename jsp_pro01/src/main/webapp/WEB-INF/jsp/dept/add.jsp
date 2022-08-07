@@ -11,48 +11,66 @@
 	<%@ include file="../module/head.jsp" %>
 </head>
 <script type="text/javascript">
-function dupCheck(value) {
+function dupCheck(value) { //중복체크
 	$.ajax({
 		type: "get",
 		url: "/ajax/dupCheck",
 		data: {
 			deptId: value
 		},
-		dataType: "json",
+		dataType: "json", 
 		success: function(data, status) {
+			var form = document.forms[0];
 			if(data.errCode === "duplicate") {
-				var form = document.forms[0];
-				
 				var label = document.createElement("label");
 				label.setAttribute("class", "input-label-error");
-				label.innerText = data.errMessage;
-				
-				form.deptId.after(label);
+                label.innerText = data.errMessage;
+                
+				if(form.deptId.nextElementSibling === null) {
+						form.deptId.after(label);
+			}
+		}else{
+			if(form.deptId.nextElementSibling !==null){
+				form.deptId.netElementSibling.remove();
 			}
 		}
-	});
+	}
+  });
 }
 
-function existsCheck(name, value) {
+function existsCheck(name, value) { //메니저 아이디, 지역코드
 	$.ajax({
 		type: "get",
 		url: "/ajax/existsCheck",
 		data: {
-			name: name,
+			name: name,     //매개변수를 2개받기!
 			value: value
 		},
 		dataType: "json",
 		success: function(data, status) {
+				var form = document.forms[0]; 
 			if(data.errCode === "notExists") {
-				var form = document.forms[0];
-				
+			  if(form[name].nextElementSibling === null){
 				var label = document.createElement("label");
 				label.setAttribute("class", "input-label-error");
 				label.innerText = data.errMessage;
-				
-				form[name].after(label);
+			    form[name].after(label);
+		   }else{
+				form[name].nextElementSibling.setAttribute("class", "input-label-error");
+				form[name].nextElementSibling.innerText = data.errMessage;
+			    }
+		    }else if(data.errCode =="exists"){
+				if(form[name].nextElementSibling === null) {
+	             	var label = document.createElement("label");
+					label.setAttribute("class", "input-label-ok");
+					label.innerText = data.errMessage;
+					form[name].after(label);
+			}else{
+				form[name].nextElementSibling.setAttribute("class", "input-label-ok");
+				form[name].nextElementSibling.innerText = data.errMessage;
+			    }
+		       }			
 			}
-		}
 	});
 }
 </script>

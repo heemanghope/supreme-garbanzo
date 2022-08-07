@@ -22,7 +22,7 @@ public class DeptModController extends HttpServlet {
 		
 		DeptDTO data = service.getDeptId(id);//조회
 		
-		request.setAttribute("data", data);//request
+		request.setAttribute("data", data);//jsp
 		
 		String view = "/WEB-INF/jsp/dept/mod.jsp";
 		request.getRequestDispatcher(view).forward(request, response);

@@ -26,24 +26,24 @@ public class DeptAddController extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		
-		String deptId = request.getParameter("deptId");
+		String deptId = request.getParameter("deptId"); //값 (추출)
 		String deptName = request.getParameter("deptName");
 		String mngId = request.getParameter("mngId");
 		String locId = request.getParameter("locId");
 		
-		DeptDTO data = new DeptDTO();
-		data.setDeptId(Integer.parseInt(deptId));
-		data.setDeptName(deptName);
+		DeptDTO data = new DeptDTO(); //객체가 담김
+		data.setDeptId(Integer.parseInt(deptId));  //data jsp 에서 get parameter 중복하기 x
+		data.setDeptName(deptName); 
 		data.setMngId(Integer.parseInt(mngId));
 		data.setLocId(Integer.parseInt(locId));
 		
-		DEPT_SERVICE_STATUS status = service.addDept(data);
+		DEPT_SERVICE_STATUS status = service.addDept(data); // 서비스에서 비지니스 로직
 		
 		String view = "/WEB-INF/jsp/dept/add.jsp";
 		switch(status) {
 			case SUCCESS:
 				response.sendRedirect(request.getContextPath() + "/depts?search=" + data.getDeptId());
-				return;
+				return; //sendRedirect 가 되거나 dispatcher fowrard가 되도록 해야함
 			case DEPT_ID_DUPLICATED:
 				request.setAttribute("errorCode", "deptId");
 				request.setAttribute("errorMsg", "부서 ID 중복 오류가 발생하였습니다.");

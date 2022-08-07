@@ -12,14 +12,18 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.conn.db.DBConn;
 
-public class DeptDAO {
+import common.model.AbstractDAO;
+import job.model.JobDTO;
 
-	private SqlSession session;
+public class DeptDAO{ //상속
+
+   private SqlSession session;
 	
 	public DeptDAO() {
 		session = DBConn.getSqlSession();
 	}
 	
+
 	public List<DeptDTO> searchAll() {
 		List<DeptDTO> datas = session.selectList("deptMapper.deptSelectAll");
 		return datas;
@@ -32,7 +36,7 @@ public class DeptDAO {
 		List<DeptDTO> datas = session.selectList("deptMapper.deptSelectPage", page);
 		return datas;
 	}
-	
+	                                  // 1    , 10
 	public List<DeptDTO> searchPage(int start, int end, String sort) {
 		Map<String, Integer> page = new HashMap<String, Integer>();
 		page.put("start", start);
@@ -108,15 +112,21 @@ public class DeptDAO {
 	
 	public void commit() {
 		session.commit();
+		
 	}
+	
 	
 	public void rollback() {
 		session.rollback();
+		
 	}
+	
 	
 	public void close() {
 		session.close();
+		
 	}
+
 
 
 }
