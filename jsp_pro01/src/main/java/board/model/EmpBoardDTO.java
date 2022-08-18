@@ -8,6 +8,7 @@ public class EmpBoardDTO {
 	private String title;
 	private String content;
 	private int empId;
+	private String empName;
 	private Date createDate;
 	private int viewCnt; //추가
 	private int like;  //추가
@@ -56,11 +57,20 @@ public class EmpBoardDTO {
 		this.like = like;
 	}
 	
+	public String getEmpName() {
+		return empName;
+	}
+	
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+	
 	@Override
 	public String toString() {
-		return "EmpBoardDTO [id=" + id + ", title=" + title + ", content=" + content + ", empId=" + empId
-				+ ", createDate=" + createDate + ", viewCnt=" + viewCnt + ", like=" + like + "]";
+		return "EmpBoardDTO [id=" + id + ", title=" + title + ", content=" + content + ", empId=" + empId + ", empName="
+				+ empName + ", createDate=" + createDate + ", viewCnt=" + viewCnt + ", like=" + like + "]";
 	}
+	
 
 	
 	

@@ -1,5 +1,6 @@
 package board.model;
 
+import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
@@ -67,6 +68,22 @@ public class EmpBoardDAO {
 		
 	}
  	
+	
+
+	public boolean updateStaticslike(EmpBoardStaticsDTO data) {
+		String mapperId =String.format(mapper, "updateStaticsLike");
+		int res =session.update(mapperId, data);
+		return res == 1 ? true : false;
+		
+	}
+
+	public List<EmpBoardDTO> selectAll() {
+		String mapperId =String.format(mapper, "selectAll");
+		List<EmpBoardDTO> res =session.selectList(mapperId);
+		return res;
+	}
+
+	
 	public void commit() {
 		this.session.commit();
 	}
@@ -79,8 +96,26 @@ public class EmpBoardDAO {
 		this.session.close();
 	}
 
+	public boolean deleteStaticsData(EmpBoardStaticsDTO data) {
+		String mapperId =String.format(mapper, "deleteStaticsData");
+		int res =session.delete(mapperId, data);
+		return res >= 0 ? true : false; //여러개 있을 수 있음 ,사용자마다 저장하게 넣어둔것
+	}
+
+	public boolean deleteData(EmpBoardDTO data) {
+		String mapperId =String.format(mapper, "deleteData");
+		int res =session.delete(mapperId, data);
+		return res == 1 ? true : false;
+	}
+
+	public boolean updateData(EmpBoardDTO data) {
+		String mapperId =String.format(mapper, "updateData");
+		int res =session.delete(mapperId, data);
+		return res == 1 ? true : false;
+		
+	}
 	
-//사내 게시판 기능 구현
+
 	
 
 

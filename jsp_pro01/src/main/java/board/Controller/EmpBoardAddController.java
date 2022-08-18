@@ -41,7 +41,7 @@ public class EmpBoardAddController extends HttpServlet {
 	 data.setEmpId(((EmpsDTO)session.getAttribute("loginData")).getEmpId());
 	// data.setEmpId(100);
 	
-	 int boardId = service.add(data);
+	 int boardId = service.add(data);//추가된 반환 번호
 	 if(boardId >0) {
 		 //정상적으로 게시글이 등록됨
 		 response.sendRedirect(request.getContextPath() +"/board/detail?id=" + boardId);
