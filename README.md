@@ -1,9 +1,3 @@
 # supreme-garbanzo
 
-README 수정.
-
-작성자 정보 변경 해봄.
-
-???
-
-github 사이트에서 수정을 해봄.
+파이널 프로젝트 : https://github.com/ModFinal/ModFinal
